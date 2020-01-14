@@ -60,14 +60,17 @@ Dado a complexidade do problema ora descrito, este estudo buscará responder à 
 
 \vspace{.5em}
 
-Esta questão foi refinada em duas questões específicas:
+Esta questão foi refinada em questões específicas:
 \vspace{.5em}
 
 \begin{enumerate}[label=\bf QP\arabic*,leftmargin=1.8cm]
     
-    \item Quais são as técnicas de seleção de teste de regressão apresentadas na literatura?
+    \item \textbf{Quais são as técnicas de seleção de teste de regressão apresentadas na literatura?} Essa questão de pesquisa será respondida com a revisão estruturada da literatura sobre Técnicas de Seleção de Teste de Regressão.
     
-    \item \textcolor{blue}{Como a indústria brasileira de testes de \ac{APPS} Android realiza teste de regressão?}
+    \item \textbf{Existem ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para utilização (open source ou proprietárias) implementadas a partir de técnicas de seleção de teste de regressão?} Essa questão de pesquisa será respondida com a revisão estruturada da literatura sobre ferramentas de teste de regressão.
+    
+    \item \textbf{Qual a perspectiva de acadêmicos e profissionais sobre técnicas de seleção de teste de regressão para projetos de \ac{APPS} Android?} Essa questão de pesquisa será respondida com a aplicação de um \textit{Survey} e realização de experimentos com acadêmicos e profissionais da indústria de software que trabalham com \ac{APPS} Android.
+    
 
 \end{enumerate}
 
@@ -75,17 +78,17 @@ Esta questão foi refinada em duas questões específicas:
 
 \subsection{Objetivos}
 
-Compreendendo que o estudo das técnicas de teste de regressão para Android é um campo em expansão, o presente trabalho tem como objetivo \textbf{realizar uma avaliação empírica das técnicas de teste de regressão \textcolor{blue}{implementadas por ferramentas} aplicadas a \ac{APPS} Android.}
+Compreendendo que o estudo das técnicas de seleção de teste de regressão para Android é um campo em expansão, o presente trabalho tem como objetivo \textbf{realizar uma avaliação empírica das técnicas de seleção de teste de regressão implementadas por ferramentas aplicadas a \ac{APPS} Android.}
 
 Os seguintes objetivos específicos foram definidos para esta investigação:
 
 \begin{enumerate}[label=\bf O\arabic*,leftmargin=1.5cm]
 
-    \item \textcolor{blue}{Realizar um estudo das ferramentas de teste de regressão para Android. Para alcançar esse objetivo, será realizado uma revisão estruturada da literatura sobre ferramentas de teste de software automatizado para Android, e, sobre ferramentas de teste de regressão, em busca de alguma ferramenta que faça teste de regressão para Android ou que possa ser adaptada para esse propósito.}
-
-   \item \textcolor{blue}{Levantar como a indústria de \ac{APPS} Android realiza teste de regressão. Para alcançar esse objetivo, será realizado um Survey.}
+    \item \textbf{Levantar quais são as técnicas de seleção de teste de regressão que a literatura apresenta.} Para alcançar esse objetivo, será realizado uma revisão estruturada de literatura sobre técnicas de seleção de teste de regressão.
     
-   \item \textcolor{blue}{Realizar uma análise comparativa das técnicas de seleção de testes de regressão implementadas por ferramentas aplicadas a \ac{APPS} Android. Para alcançar esse objetivo, será realizado um estudo experimental.}
+    \item \textbf{Verificar quais são as ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para uso (open source ou proprietárias), e se as mesmas foram implementadas baseadas nas técnicas de seleção de teste de regressão.} Para alcançar esse objetivo, será realizado uma revisão estruturada de literatura sobre ferramentas de teste de regressão.
+    
+    \item \textbf{Identificar como é realizado o processo de teste de software por acadêmicos e profissionais que desenvolvem \ac{APPS} Android.} Para alcançar esse objetivo, será aplicado um \textit{Survey} e realizado experimentos com acadêmicos e profissionais que trabalham com projetos de \ac{APPS} para Android.
 
 
 \end{enumerate}
@@ -106,16 +109,14 @@ Esta Seção apresenta a metodologia utilizada para desenvolver este trabalho e 
   
   O levantamento bibliográfico foi feito de forma estruturada, com a leitura de livros e artigos sobre os tópicos abordados na pesquisa. Inicialmente uma leitura mais ampla em busca de um conhecimento inicial, e em uma segunda fase, com leituras específicas de textos com relação direta a este trabalho.
   
-  \item \textbf{Fase 2}: Refere-se ao Estudo Experimental.
+  \item \textbf{Fase 2}: \textcolor{blue}{Refere-se ao Survey.}
   
-  Esta etapa contempla a execução de um experimento cujo objetivo principal é avaliar empiricamente a eficiência das técnicas de teste de regressão para \ac{APPS} implementadas por ferramentas, em um conjunto de \ac{APPS} Android, vide Tabela \ref{table:apps}. O estudo experimental foi planejado com base em \cite{Wohlin:2012:ESE:2349018}.
+  Esta etapa contempla a aplicação de um Survey para acadêmicos e profissionais que trabalham com \ac{APPS} Android, para compreender como é realizado o processo de teste de \ac{APPS} Android. O Survey foi planejado com base em \cite{Kitchenham:2002:PSR:566493.566495}.
   
+  \item \textbf{Fase 3}: Refere-se ao Estudo Experimental.
   
-  \item \textbf{Fase 3}: \textcolor{blue}{Refere-se ao Survey.}
+  Esta etapa contempla a execução de experimentos cujo objetivo principal é compreender como as ferramentas disponíveis para testes de \ac{APPS} Android podem auxiliar acadêmicos e profissionais no processo de teste de regressão dos seus aplicativos. O estudo experimental será planejado com base em \cite{Wohlin:2012:ESE:2349018}.
   
-  \textcolor{blue}{Esta etapa contempla a aplicação de um Survey em empresas de desenvolvimento/testes de \ac{APPS} Android, para compreender como a indústria brasileira de teste realiza teste de regressão. O Survey foi planejado com base em \cite{Kitchenham:2002:PSR:566493.566495}.}
- 
-
 \end{itemize}
 
 
@@ -127,11 +128,11 @@ Ao final deste trabalho, espera-se contribuir com os seguintes resultados:
 
 \begin{itemize}
 
-    \item Contribuir com o corpo de conhecimento sobre o uso de técnicas de teste de regressão para o desenvolvimento de \ac{APPS} Android, com base na síntese de evidências disponíveis na literatura.
+    \item Contribuir com o corpo de conhecimento sobre o uso de técnicas de seleção teste de regressão para o desenvolvimento de \ac{APPS} Android, com base na síntese de evidências disponíveis na literatura.
     
-    \item Coletar e analisar dados, no sentido de prover evidências empíricas sobre \textcolor{blue}{quais as técnicas de teste de regressão implementadas por ferramentas são mais adequadas para projetos de \ac{APPS} Android.}
+    \item Coletar e analisar dados, no sentido de prover evidências empíricas sobre quais as técnicas de seleção de teste de regressão implementadas por ferramentas são mais adequadas para projetos de \ac{APPS} Android.
     
-    \item \textcolor{blue}{Identificar como a indústria de \ac{APPS} Android realiza teste de regressão .}
+    \item Identificar como a indústria de \ac{APPS} Android realiza teste de regressão.
     
     \item Apresentar o potencial, em termos de \textit{features} implementadas, das ferramentas de teste de regressão disponíveis para projetos Android, e levantar oportunidades para implementações futuras.
 
@@ -143,7 +144,8 @@ Ao final deste trabalho, espera-se contribuir com os seguintes resultados:
 Os demais capítulos desta qualificação estão estruturados como segue: 
 \begin{itemize}
 \item \textbf{Capítulo 2}: Fundamentação Teórica;
-\item \textbf{Capítulo 3}: Estudo Experimental;
-\item \textbf{Capítulo 4}: \textit {\textcolor{blue}{Survey;}}
-\item \textbf{Capítulo 5}: Considerações Finais.
+\item \textbf{Capítulo 3}: Técnicas de seleção de teste de regressão;
+\item \textbf{Capítulo 4}: Ferramentas para teste de \ac{APPS} Android;
+\item \textbf{Capítulo 5}: \textit{Survey};
+\item \textbf{Capítulo 6}: Considerações Finais.
 \end{itemize}
