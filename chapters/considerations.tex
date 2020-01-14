@@ -1,0 +1,66 @@
+\xchapter{Considerações Finais}{}
+\acresetall
+São apresentados neste capítulo os trabalhos relacionados, e os próximos passos desta investigação científica.
+
+\section{Trabalhos Relacionados}
+
+Nesta seção serão apresentados os trabalhos relacionados a este estudo. A literatura apresenta alguns trabalhos referentes à técnicas de teste de regressão para Android:
+
+\begin{itemize}
+    
+    \item \cite{8377661}: Este trabalho apresenta um estudo sobre técnicas de seleção de teste de regressão. Os pesquisadores propõem a criação de uma técnica denominada \textbf{ReTestDroid} que serve para modelar invocações de tarefas assíncronas, ciclo de vida de atividades baseado em fragmentos e código nativo dentro do gráfico de fluxo de controle de uma aplicação Android. A técnica é implementada e testada em cinco \ac{APPS} Android.
+    
+    \item \cite{Do2016RedroidAR}: Este trabalho apresenta um estudo de \textit{bugs} reais em \ac{APPS} Android que demonstra a existência de erros de regressão. Como solução para este problema, os pesquisadores propõem a técnica de seleção de teste de regressão denominada \textbf{REDROID} que aproveita a combinação de análise de impacto estático e cobertura dinâmica de código, para identificar um subconjunto de casos de teste para re-execução na versão modificada do aplicativo. A técnica foi implementada e testada através de um vasto estudo empírico.
+    
+\end{itemize}
+    
+    Os trabalhos citados \cite{8377661} e \cite{Do2016RedroidAR} realizam um estudo sobre técnicas de seleção de teste de regressão para \ac{APPS} Android, e propõem como solução a criação de uma nova técnica, bem como sua implementação, e realizam estudos para prover evidências empíricas sobre sua eficácia. \textcolor{blue}{O presente trabalho tem como diferencial coletar evidências empíricas sobre a eficiência das técnicas de teste de regressão implementadas por ferramentas para \ac{APPS} Android evidenciadas na literatura e as utilizadas pela indústria, com a realização de um estudo experimental destas técnicas propostas em um conjunto \ac{APPS} Android escritos em Java. Ainda, propomos identificar a oportunidade de implementação de novas ferramentas.}
+
+
+\section{Cronograma de Atividades}
+
+A presente seção apresenta o cronograma de atividades necessárias para realização da dissertação:
+
+\begin{enumerate}[label=\bf AT\arabic*,leftmargin=1.7cm]
+
+    \item \textcolor{blue}{\textbf{Revisão estruturada da literatura}: Atualizar a revisão sistemática proposta por \citeonline{8453877} para identificar novas ferramentas de teste de regressão.}
+    
+    \item \textbf{Estudo experimental}: refinar o planejamento do estudo experimental; executá-lo, e analisar os dados obtidos.
+    
+    \item \textcolor{blue}{\textbf{Survey}: criação de um formulário on-line com uso do pacote de aplicativo Google Docs, para disponibilizar o questionário; Validação do questionário a ser aplicado, por meio de realização de um projeto piloto; Divulgação do formulário on-line por meio de e-mail para empresas que trabalham com desenvolvimento / testes de \ac{APPS} Android;     Coleta, análise e síntese dos dados, obtidos pelo preenchimento do formulário on-line.}
+    
+    \item \textbf{Dissertação}: esta atividade corresponde à escrita do texto da pesquisa; esta é uma atividade a ser realizada em paralelo às demais atividades, com refinamentos sucessivos. De acordo com o desenvolvimento e conclusão das demais etapas, serão relatados nesse documento os resultados encontrados.
+    
+    \item \textbf{Artigos científicos}: esta atividade refere-se à tentativa de publicar os resultados obtidos com a pesquisa; o nosso plano inclui a submissão a pelo menos um artigo para uma conferência/periódico da área de engenharia de software, relatando o estudo experimental e os resultados alcançados, como contribuição ao estado-da-arte. Ainda não foi definido o local em que o texto será submetido.
+    
+    \item \textbf{Defesa da Dissertação}: após a conclusão do estudo, agendaremos a defesa da dissertação de mestrado. 
+
+\end{enumerate}
+
+A Tabela \ref{tabela_cronograma} apresenta o cronograma das atividades definidas para o trabalho.
+
+\begin{table}[ht]
+    \centering
+    \footnotesize
+    \def \arraystretch{0.8}
+    \caption{Cronograma de Atividades}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\bf Atividades} & \multicolumn{2}{c|}{\bf 2019} & \multicolumn{6}{c|}{\bf 2020} \\ \cline{2-9} 
+        & \bf 11 & \bf 12 & \bf 1 & \bf 2 & \bf 3 & \bf 4 & \bf 5 & \bf 6  \\  
+        \hline
+        \bf AT1 & $\bullet$ & $\bullet$ & $\bullet$ &  &  &  &  &\\
+        \hline
+        \bf AT2 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ &\\
+        \hline
+        \bf AT3 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & \\
+        \hline
+        \bf AT4 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
+        \hline
+        \bf AT5 & & & & & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
+        \hline
+        \bf AT6 &  &  &  &  &  & & & $\bullet$\\
+        \hline
+    \end{tabular}
+    \label{tabela_cronograma}
+\end{table}

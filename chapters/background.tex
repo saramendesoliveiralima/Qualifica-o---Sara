@@ -1,0 +1,386 @@
+\xchapter{Referencial Teórico, Conceitos e Aplicabilidade}{}
+\acresetall 
+O presente capítulo apresenta os conceitos fundamentais necessários para a compreensão do trabalho proposto: evolução de software; qualidade de software; teste de software; teste de regressão e estratégias de testes de aplicações para dispositivos móveis.
+
+
+\section{Evolução de Software}\label{sec:evolucaodesoftware}
+
+Em 1967, havia uma consciência do crescimento rápido do mercado de desenvolvimento de software, bem como do impacto e da importância da utilização dos mesmos. Além disso, com os diversos problemas enfrentados na fabricação de software, observou-se a necessidade de desenvolvimento de técnicas baseadas em fundamentos teóricos e disciplinas práticas estabelecidas nos ramos tradicionais da engenharia. Esses fatores levaram a realização da primeira conferência sobre Engenharia de Software em 1968. O objetivo desta conferência, organizada pelo Comitê de Ciência da \ac{OTAN}, foi “o estabelecimento e uso de princípios de engenharia para obter software confiável, eficiente e economicamente viável” \cite{DBLP:series/springer/Mens08}.
+
+O desenvolvimento de um software não termina com a entrega do sistema, mas, refere-se a um processo contínuo durante toda a sua vida útil. Depois que um sistema é implantado, para que ele se mantenha útil, faz-se necessário o processo de evolução do software. A \textbf{evolução} é a fase em que as mudanças significativas na arquitetura e nas funcionalidades do software podem ser feitas. Quando em serviço, as mudanças feitas são relativamente pequenas, essenciais. A Figura \ref{figure:modeloevolucao} apresenta um modelo em espiral de desenvolvimento e evolução \cite{sommerville2011engenharia}. Ela ilustra que no processo de evolução, ao decorrer da utilização do software, surgem novas solicitações de mudança, gerando assim novas \textit{releases} do sistema.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.55\textwidth]{images/modeloevolucao.png}
+\caption{Um modelo em espiral de desenvolvimento e evolução \cite{sommerville2011engenharia}.}
+\label{figure:modeloevolucao}
+\end{figure}
+
+Durante o processo de evolução, o software continua sendo usado, e existe um fluxo de constantes propostas de mudanças, em particular no que diz respeito às alterações nos requisitos. Com o decorrer do tempo, as constantes alterações tendem a degradar o software e as mudanças tendem a ficar mais caras. Em um determinado estágio do ciclo de vida, alcança-se um ponto de transição em que grandes mudanças tornam-se menos rentáveis. Nessa etapa o software passa da \textbf{evolução} para o \textbf{serviço}. Na etapa do serviço o software continua sendo utilizado, porém, pequenas mudanças são realizadas. Na fase final, na \textbf{interrupção gradual}, o software pode ainda ser utilizado mas sem que sejam implementadas novas mudanças \cite{sommerville2011engenharia}. A Figura \ref{figure:evolucaoeservico} apresenta esse ciclo, enfatizando a mudança nos estados no processo de evolução de software.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.75\textwidth]{images/evolucaoeservico.png}
+\caption{Mudança de estados no processo de evolução de software \cite{sommerville2011engenharia}.}
+\label{figure:evolucaoeservico}
+\end{figure}
+
+Uma das consequências da evolução de um software é a constante necessidade de realizar sua manutenção. A Norma IEEE 1219 \cite{257623} define manutenção de software como a modificação de um produto de software após a entrega para corrigir falhas; melhorar o desempenho ou outros atributos; ou adaptar o produto a uma modificação. \citeonline{DBLP:series/springer/Mens08} classifica o processo de manutenção como: perfectiva, corretiva, adaptativa ou preventiva:
+
+\begin{itemize}
+   
+    \item \textbf{Manutenção perfectiva}: É qualquer modificação de um produto de software após a entrega com o objetivo de melhorar o desempenho ou a capacidade de manutenção.
+   
+    \item \textbf{Manutenção corretiva}: Diz respeito às modificações reativas de um produto de software executadas após a entrega para corrigir falhas descobertas.
+   
+    \item \textbf{Manutenção adaptativa}: É a modificação de um produto de software executada após a entrega para manter um programa de computador utilizável em um ambiente modificado ou em mudança.
+   
+    \item \textbf{Manutenção preventiva}: Refere-se a modificações de software realizadas com o objetivo de prevenir problemas antes que eles ocorram.
+
+\end{itemize}
+
+Segundo \citeonline{sommerville2011engenharia}, a evolução dos processos de software pode variar dependendo do tipo de software que esteja sendo mantido, dos processos de desenvolvimento usados em uma organização e das habilidades das pessoas envolvidas. Em algumas organizações esse processo pode ser informal, em outras, o processo é mais formal com documentação estruturada produzida em cada estágio do processo. Em todas as organizações, as propostas de mudança no sistema são os acionadores para a evolução, como ilustrado na Figura \ref{figure:propostasdemudanca}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/propostasdemudanca.png}
+\caption{Processos de identificação de mudança e evolução \cite{sommerville2011engenharia}.}
+\label{figure:propostasdemudanca}
+\end{figure}
+
+
+\section{Qualidade de Software}\label{sec:qualidadedesoftware}
+
+
+O termo qualidade é apresentado com diferentes conceitos na literatura. A ISO 9000 define qualidade como o grau
+em que um conjunto de características inerentes preenchem os requisitos \cite{iso9000}. Para \citeonline{juran1970quality} e \citeonline {crosby1979quality}, o conceito de qualidade está relacionado à ``conformidade com requisitos'' e ``adequação para
+uso'', respectivamente. Aplicando este conceito para a Engenharia de Software, \citeonline{PRESSMAN2016} descreve que qualidade é algo que precisa ser definido com a finalidade de ser mensurado e deve ser uma questão em que todos participantes do ciclo de vida de desenvolvimento de um software se envolvam. Para \citeonline{HIRAMA2011}, qualidade é algo difícil de ser definido. Ainda mais difícil é garantir a qualidade de algum produto, visto que a percepção de qualidade passa pelas expectativas que cada pessoa tem sobre algum produto ou serviço. A resposta do que é qualidade baseia-se nas expectativas dos \textit{stakeholders}, vide Figura \ref{figure:conceitoqualidade}.
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/conceitoqualidade.png}
+\caption{\textit{Stakeholders} e suas expectativas sobre qualidade de software  \cite{HIRAMA2011}}
+\label{figure:conceitoqualidade}
+\end{figure}
+
+Tendo em vista a importância da qualidade no processo de desenvolvimento de um software, garantir a qualidade é uma tarefa relevante. Segundo \citeonline{HIRAMA2011} Garantia de Qualidade, do inglês \ac{QA}, é o processo geral de definição de como a qualidade de software pode ser atingida e como a organização de desenvolvimento sabe que o software tem o nível de qualidade necessário. A garantia de qualidade estabelece processos, procedimentos e padrões que conduzem a um software de qualidade. 
+
+Para \citeonline{PRESSMAN2016}, a garantia da qualidade de software engloba os seguintes elementos: um processo de \ac{SQA}; tarefas específicas de garantia e controle da qualidade (incluindo revisões técnicas e estratégia de testes em diversas ``camadas''); prática efetiva de engenharia de software (métodos e ferramentas); controle de todos os artefatos de software e as mudanças feitas nesses produtos; um procedimento para garantir a conformidade com os padrões de desenvolvimento de software (quando aplicáveis); mecanismos de medição e de geração de relatórios.
+
+
+De acordo com \citeonline{HIRAMA2011}, a qualidade de um software está intimamente relacionada à quantidade de defeitos descobertos. Quanto mais defeitos são descobertos, maior é a qualidade do software. A Figura \ref{figure:ETESTE} ilustra a relação entre qualidade de software e extensão de teste.
+
+Para \citeonline{PRESSMAN2016}, o teste proporciona o último elemento a partir do qual a qualidade pode ser estimada e, mais pragmaticamente, os erros podem ser descobertos.
+
+A próxima seção apresenta os conceitos fundamentais sobre teste de software.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/ETESTE.png}
+\caption{Relação entre qualidade de software e extensão de teste \cite{HIRAMA2011}.}
+\label{figure:ETESTE}
+\end{figure}
+
+
+
+\section{Teste de Software}\label{sec:testesdesoftware}
+
+\subsection{Validação, Verificação e Teste}
+
+Desenvolver software não é uma tarefa simples e envolve diversas condicionais, tais como: escopo, prazo e recurso disponível. Nesse processo, um problema que pode ocorrer é entregar algo diferente do que era esperado pelo cliente. Isso acontece na maioria das vezes por causa de erros humanos, ou seja, porque as atividades de desenvolvimento dependem da capacidade de interpretação e execução das pessoas que as constroem. Para que esses erros não perdurem e para que se possa identificá-los antes de liberar o software para utilização, existe uma série de atividades, coletivamente chamadas de Validação, Verificação e Teste. Em geral, dividem-se as atividades de Validação, Verificação e Teste em estáticas e dinâmicas. As estáticas são as que não requerem a execução ou mesmo a existência de um programa ou modelo executável para serem conduzidas. As dinâmicas são as que se baseiam na execução de um programa ou de um modelo \cite{DELAMARO2007}.
+
+\ac{VV} permite que se determine sistematicamente se os requisitos de um sistema estão sendo corretamente tratados e implementados. A atividade de testes tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos do software. \ac{VV} contribuem diretamente para o atendimento dos prazos e custos do projeto. Portanto, conhecer os conceitos de \ac{VV} é importante para obter produtos de maior qualidade e produtividade e melhorar os processos continuamente. As atividades de validar, verificar e testar auxiliam na \ac{QA} do software \cite{HIRAMA2011}.
+
+
+É importante compreender a distinção entre alguns conceitos relacionados, conforme apresentado no padrão de testes de software da IEEE \cite{159342}:
+
+\begin{enumerate}
+    \item \textbf{Erro \textit{(error, mistake)}:} Uma ação humana que produz um resultado incorreto.
+    
+    \begin{itemize}
+        \item Os desenvolvedores cometem erros (enganos) quando interpretam mal as necessidades dos clientes.
+        \item Os usuários cometem erros (enganos) quando operam um sistema em desacordo com as intenções dos desenvolvedores.
+    \end{itemize}
+    
+    \item \textbf{Defeito \textit{(bug, fault, defect)}:} Implementado dentro de um artefato.
+    
+    \begin{itemize}
+        \item Requisitos inconsistentes com as necessidades dos clientes.
+        \item Requisitos funcionais do sistema em desacordo com os requisitos de
+negócio.
+    \end{itemize}
+    
+     \item \textbf{Falha \textit{(failure)}:} A incapacidade de um sistema ou componente em executar
+as funções requeridas dentro de um nível de desempenho requerido.
+
+    \begin{itemize}
+        \item Manifestação de um defeito no sistema ou software (ex: a ``tela azul'' no Sistema Operacional Windows).
+        \item Apresentação de datas incorretas.
+    \end{itemize}
+    
+\end{enumerate}
+
+\subsection{Atividade de Teste de Software}
+
+ De acordo com \citeonline{PRESSMAN2016}, teste é um conjunto de atividades que podem ser planejadas com antecedência e executadas sistematicamente. Por essa razão, é definido um conjunto de etapas no qual podem ser empregadas técnicas específicas de projeto de caso de teste e métodos de teste.
+
+A atividade de teste tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos do software. O teste de software pode ser usado para mostrar a presença de defeitos, mas nunca a sua ausência \cite{HIRAMA2011}.
+
+Testes devem acontecer desde o momento da concepção do software perpassando todo o processo de desenvolvimento. Um procedimento de teste completo é composto por algumas etapas, conforme apresentado na Figura \ref{figure:PTESTE}. O teste procura descobrir defeitos quando o comportamento do software não está correto ou não está em conformidade com o que foi especificado.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.8\textwidth]{images/PTESTE.png}
+\caption{Procedimento de Teste \cite{HIRAMA2011}}
+\label{figure:PTESTE}
+\end{figure}
+
+Um dos resultados do procedimento de teste é gerar os casos de teste para que posteriormente possam ser executados.  Um bom caso de teste é aquele que tem uma grande probabilidade de revelar um defeito ainda não descoberto \cite{HIRAMA2011}.
+
+Segundo \citeonline{PRESSMAN2016}, há diversas estratégias de teste de software disponíveis na literatura. Elas fornecem um modelo para o teste e têm as seguintes características:
+
+\begin{itemize}
+    \item Para executar um teste eficaz, faça revisões técnicas eficazes. Fazendo isso, muitos erros serão eliminados antes do começo do teste.
+    \item O teste começa no nível de componente e progride em direção à integração do sistema computacional como um todo.
+    \item Diferentes técnicas de teste são apropriadas para diferentes abordagens de engenharia de software e em diferentes pontos no tempo.
+    \item O teste pode ser realizado pelo próprio desenvolvedor, ou por equipes independentes.
+    \item O teste e a depuração são atividades diferentes, mas a depuração deve ser associada a alguma estratégia de teste.
+\end{itemize}
+
+O documento básico para a atividade de teste é o Plano de Testes, no qual se define: objetivos para cada tipo (ou fase de teste); estratégias de teste; cronograma e responsabilidades; procedimentos e padrões a serem usados na execução e na elaboração do relatório de testes; critérios para a conclusão do teste, bem como o sucesso de cada teste \cite{HIRAMA2011}.
+
+Para \citeonline{Ammann:2008:IST:1355340}, o teste de software é caro e exige mão de obra intensiva, e requer até 50\% dos custos de desenvolvimento de software e ainda mais para aplicativos críticos de segurança. Faz-se necessário automatizar o máximo possível dos testes de software, reduzindo significativamente o custo, minimizando o erro humano e facilitando o teste de regressão, vide Seção \ref{sec:testesregressao}.
+
+
+\subsection{Técnicas de Teste de Software}
+
+
+Segundo \citeonline{DELAMARO2007}, as duas técnicas mais amplamente aceitas na academia e na indústria são as técnicas de testes \textit{funcionais} e as \textit{estruturais}, comumente conhecidas como teste Caixa Preta e teste Caixa Branca, respectivamente. Elas são discutidas a seguir:
+
+
+
+\begin{itemize}
+    \item \textbf{Técnica Funcional}: Técnica utilizada para projetar casos de teste na qual o programa ou sistema é considerado uma caixa preta. Para testá-lo, fornece-se entradas e avalia-se as saídas geradas para verificar se estão em conformidade com os objetivos especificados. No teste funcional os detalhes de implementação não são considerados e o software é avaliado segundo a visão do usuário \cite{DELAMARO2007}.
+    
+    \item \textbf{Técnica Estrutural}: A técnica estrutural estabelece os requisitos de teste com base em uma dada implementação, requerendo a execução de partes ou de componentes elementares do programa. Testa-se os caminhos lógicos do software, fornecendo-se casos de teste que põem à prova tanto conjuntos específicos. Os testes gerados por essa técnica são chamados também de teste de caixa branca \cite{DELAMARO2007}.
+    
+\end{itemize}
+
+Segundo \citeonline{HIRAMA2011}, os testes de Caixa Branca e os testes de Caixa Preta precisam atender algumas características, que são elas:\\
+
+\textbf{Características dos testes Caixa Branca:}
+
+\begin{itemize}
+    \item O projeto de casos de teste usa a estrutura de controle procedimental do software (fluxo de controle do software) para derivar casos de teste;
+    \item Deve garantir que todos os caminhos independentes dentro de um módulo tenham sido exercitados pelo menos uma vez;
+    \item Deve exercitar todas as decisões lógicas para valores falsos ou verdadeiros;
+    \item Deve executar todos os laços em suas fronteiras e dentro de limites operacionais;
+    \item Deve exercitar as estruturas de dados internas para garantir a sua validade.
+\end{itemize}
+
+
+
+\textbf{Características dos testes Caixa Preta:}
+
+\begin{itemize}
+    \item Concentram-se nos requisitos funcionais do software;
+    \item São uma abordagem complementar aos testes estruturais.
+\end{itemize}
+
+
+
+\subsection{Tipos de Teste}
+
+
+A atividade de testes é dividida em fases com objetivos distintos \cite{DELAMARO2007}. Segundo \citeonline{HIRAMA2011}, os tipos de teste mais comuns realizados para cobrir os testes estruturais e funcionais são: teste de unidade (estrutural); teste de integração (funcional); teste de validação (funcional); e teste de sistema (funcional).
+
+\begin{itemize}
+
+\item {\textbf{Teste de unidade}}: tem como foco as menores unidades de um programa, podendo ser funções, procedimentos, métodos ou classes. O objetivo é testar os componentes isoladamente verificando o funcionamento conjunto dos algoritmos e as estruturas de dados. Espera-se então que sejam identificados erros relacionados a algoritmos incorretos ou mal implementados, estruturas de dados incorretas, ou simples erros de programação.  A referência usada para os teste é a Especificação de Módulos, um documento detalhado de cada módulo de software. O teste de unidade pode ser aplicado à medida que ocorre a implementação das unidades e pelo próprio desenvolvedor. A Figura \ref{figure:testedeunidade} ilustra o teste de unidade.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/testedeunidade.png}
+\caption{Teste de Unidade \cite{PRESSMAN2016}.}
+\label{figure:testedeunidade}
+\end{figure}
+
+\item {\textbf{Teste de integração}}: deve ser realizado após serem testadas as unidades individuais, e a ênfase é dada na construção da estrutura do sistema. O objetivo é testar um conjunto de módulos verificando o seu funcionamento com foco nas suas interfaces entre os módulos. Quando as diversas partes do software são colocadas para trabalhar juntas, verifica-se se a interação entre elas funciona de maneira adequada e não ocasiona erros. Faz-se necessário um grande conhecimento das estruturas internas e das interações existentes entre as partes do sistema. A referência usada para os testes é a Especificação de Projeto, um documento detalhado da organização e interdependência entre os módulos de software. O teste de integração tende a ser executado pela própria equipe de desenvolvimento. 
+
+Segundo \citeonline{PRESSMAN2016}, o teste de integração pode ser descendente (\textit{top-down}) - \textit{c.f.} Figura \ref{figure:testedescendente}, ou ascendente (\textit{bottom-up}) - \textit{c.f.} Figura \ref{figure:testeascendente}. 
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/testedescendente.png}
+\caption{Teste de Integração Descendente \cite{PRESSMAN2016}.}
+\label{figure:testedescendente}
+\end{figure}
+
+Na abordagem \textit{top-down} os módulos são integrados deslocando-se para baixo por meio da hierarquia de controle, começando com o módulo de controle de principal, e posteriormente, os módulos subordinados ao módulo principal são incorporados à estrutura de uma maneira primeiro-em-profundidade ou primeiro-em-largura.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.5\textwidth]{images/testeascendente.png}
+\caption{Teste de Integração Ascendente \cite{PRESSMAN2016}.}
+\label{figure:testeascendente}
+\end{figure}\\
+
+Na abordagem \textit{bottom-up} a construção e o teste começam dos componentes dos níveis mais baixos na estrutura do programa. Devido aos componentes serem integrados de baixo para cima, a funcionalidade proporcionada por componentes subordinados a determinado nível está sempre disponível, e a necessidade de pseudo-controladores é eliminada.
+
+\item {\textbf{Teste de validação}}: tem como objetivo testar o software como um todo verificando se todas as exigências funcionais, comportamentais e de desempenho foram atendidas. A referência usada para os testes é a Especificação de Requisitos de Software, um documento que contém os requisitos funcionais e não funcionais do software. O teste é realizado pela equipe de desenvolvimento de software.
+
+\item {\textbf{Teste de sistema}}: tem como objetivo medir o sistema em diferentes cenários verificando se todos os elementos do sistema (hardware, software, banco de dados e pessoas) foram adequadamente integrados e realizam as funções requeridas. A referência usada para os testes é a Especificação de Sistema, um documento que contém a descrição funcional do sistema, dos subsistemas e do seu desempenho no ambiente operacional. O teste é realizado por uma equipe independente ou um usuário do sistema.
+
+\end{itemize}
+
+A Figura \ref{figure:etapasteste} ilustra a ordem de execução dos testes de acordo com o seu tipo.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.75\textwidth]{images/etapasteste.png}
+\caption{Etapas de teste de software \cite{PRESSMAN2016}}
+\label{figure:etapasteste}
+\end{figure}
+
+Segundo \citeonline{HIRAMA2011}, existem ainda outros testes que podem ser aplicados a sistemas de software. São eles: teste de recuperação, teste de proteção, teste de estresse, teste de desempenho, dentre outros, que visam validar requisitos não-funcionais do software, i.e., aqueles ligados aos atributos de qualidade esperados. Alguns desses são descritos a seguir:
+
+\begin{itemize}
+    
+    \item \textbf{Teste de recuperação}: teste que força o sistema a apresentar falhas de diversas maneiras e verifica se a recuperação (reiniciação do sistema e recuperação de dados) é adequadamente executada.
+    
+    \item \textbf{Teste de proteção}: teste que tenta verificar se todos os mecanismos de proteção embutidos em um sistema funcionam contra acessos indevidos.
+    
+    \item \textbf{Teste de estresse}: teste para confrontar o software com situações anormais (alta exigência de recursos, alto número de interrupções, alta taxa de entrada de dados, alta busca de dados em disco).
+    
+    \item \textbf{Teste de desempenho}: teste de software no contexto de um sistema integrado (tempos envolvidos, ciclos de processador, interrupções).
+
+\end{itemize}
+
+Outros tipos de teste de software relevantes são os testes \textbf{alfa} e \textbf{beta}. Em virtude das dificuldades encontradas pelos desenvolvedores para preverem como o cliente usará o programa, ou, como ele irá interpretar os manuais de usuários, alguns testes são realizados para compreender como será a aceitação do cliente em relação ao software desenvolvido. 
+
+Segundo \citeonline{PRESSMAN2016} o teste \textbf{alfa} é realizado na instalação do desenvolvedor por um grupo representativo de usuários finais. O software é usado em um cenário natural, onde o desenvolvedor observa o comportamento dos usuários, registra os erros e possíveis problemas de uso. Esses testes são conduzidos em um ambiente controlado. O teste \textbf{beta} é realizado nas instalações de um ou mais usuários finais. Na execução deste teste, geralmente, o desenvolvedor não está presente. O teste beta é um aplicação do software em um ambiente não controlado pelo desenvolvedor, onde quem registra todos os possíveis problemas encontrados durante o teste e relata para o desenvolvedor é o próprio cliente.
+
+
+\section{Teste de Regressão}\label{sec:testesregressao}
+
+\subsection{Definição}
+
+ A \citeonline{159342} define teste de regressão como repetição seletiva de um sistema ou componente para verificar se as modificações não causaram efeitos não-intencionais e se o sistema ou componentes ainda estão em conformidade com o requisito especificado. Segundo \citeonline{Ammann:2008:IST:1355340}, o teste de regressão é o processo de testar novamente o software que foi modificado. 
+ 
+ À medida que os desenvolvedores mantêm um sistema de software, eles periodicamente fazem teste de regressão, na esperança de encontrar erros causados por suas alterações e fornecer confiança de que suas modificações estão corretas. Para suportar esse processo, os desenvolvedores geralmente criam um conjunto inicial de testes, que são reutilizáveis. A estratégia de teste de regressão mais simples é a reexecução de todos os casos de teste. Essa abordagem, porém, torna-se provavelmente inviável por exigir uma quantidade muito grande de tempo para a sua execução completa \cite{Graves:2001:ESR:367008.367020}. Para \citeonline{Ammann:2008:IST:1355340} o teste de regressão constitui a grande maioria dos esforços de teste no desenvolvimento de software comercial, e é uma parte essencial de qualquer processo de desenvolvimento de software viável.
+ 
+ Segundo \citeonline{65194}, os testes de regressão podem ser corretivos ou progressivos. A Tabela \ref{table:TRCP} apresenta algumas diferenças fundamentais entre ambos.
+
+ 
+\begin{table}[th]
+    \footnotesize
+    \centering
+    \caption{Teste de Regressão Corretivo \& Progressivo \cite{65194}}
+    \label{table:TRCP}
+    \def \arraystretch{1.3}
+    \begin{tabular}{m{6.5cm}m{6.5cm}}
+        \toprule
+        \textbf{Teste de Regressão Corretivo} & \textbf{Teste de Regressão Progressivo} \\
+        \midrule
+        \textit{A especificação não é alterada} & A especificação é alterada\\
+        \textit{Envolve pequenas modificações no código (por exemplo, adicionar e excluir instruções)} & Envolve modificação importante (por exemplo, adicionar e excluir módulos)\\ 
+        \textit{Geralmente feito durante o desenvolvimento e a manutenção corretiva} & Geralmente feito durante a manutenção adaptativa e aperfeiçoada\\
+        \textit{Muitos casos de teste podem ser reutilizados} & Menos casos de teste podem ser reutilizados\\
+        \textit{Chamado em intervalos irregulares} & Chamado em intervalos regulares\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Para \citeonline{Ammann:2008:IST:1355340}, os testes de regressão devem ser automatizados. De fato, pode-se dizer que o teste de regressão não automatizado é equivalente a nenhum teste de regressão.
+
+
+\subsection{Distinção entre as classes de técnicas}
+ 
+Para \citeonline{Ammann:2008:IST:1355340} uma técnica é \textbf{precisa} na medida em que omite testes de regressão que não são reveladores de modificação. Uma técnica é \textbf{eficiente} na medida em que determinar o subconjunto apropriado do conjunto de testes de regressão. E, uma técnica é \textbf{geral} no grau que se aplica a uma ampla variedade de situações práticas.
+
+Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de teste de regressão são classificadas como: Técnicas de Seleção; Técnicas de Minimização; e Técnicas de Priorização, seguida das seguintes definições:
+ 
+ 
+\begin{itemize}
+ 
+ \item \textbf{Definição 1 (Problema de Minimização do Conjunto de Testes)}:
+ 
+ As técnicas de minimização do conjunto de testes visam identificar casos de teste redundantes e removê-los do conjunto de testes para reduzir o tamanho do conjunto de testes.
+  
+\textbf{Dado}: Um conjunto de testes $T$, um conjunto de requisitos de teste ${r1, ..., rn}$, que deve ser satisfeito para fornecer o teste ``adequado'' desejado do programa e subconjuntos de $T, T1, ..., T_n$, um associado a cada um dos $r_is$ de tal forma que qualquer um dos casos de teste $t_j$ pertencentes ao $T_$ pode ser usado para atingir o requisito $r_i$.
+
+\textbf{Problema}: Encontre um conjunto representativo, $T'$, de casos de teste de $T$ que satisfaça todos os $r_is$.
+
+
+
+\item \textbf{Definição 2 (Problema de Seleção de Casos de Teste)}:
+
+A seleção do caso de teste, no inglês \ac{RTS}, é essencialmente semelhante ao problema de minimização do conjunto de testes: ambos os problemas tratam da escolha de um subconjunto de casos de teste do conjunto de testes. A principal diferença entre essas duas abordagens na literatura é se o foco está nas mudanças no \ac{SUT}, em português, sistema sob teste. A minimização do conjunto de testes geralmente é baseada em métricas como a cobertura medida de uma única versão do programa em teste. Em contraste, no \ac{RTS}, os casos de teste são selecionados porque sua execução é relevante para as mudanças entre a versão anterior e a atual do \ac{SUT}.
+
+\textbf{Dado}: O programa $P$, a versão modificada de $P$, $P'$ e um conjunto de testes $T$.
+\textbf{Problema}: Encontre um subconjunto de  $T$ , $T'$, com o qual testar $P'$.
+
+
+
+\item \textbf{Definição 3 (Problema de Priorização de Casos de Teste)}:
+
+A priorização de caso de teste procura encontrar o pedido ideal de casos de teste para teste, para que o testador obtenha o máximo benefício, mesmo se o teste for prematuramente interrompido em algum ponto arbitrário. 
+
+\textbf{Dado}: Um conjunto de testes $T$, o conjunto de permutações de $T$, $PT$ e uma função de $PT$ para números reais, $f: PT \longrightarrow R$.
+
+\textbf{Problema}: Para encontrar $T' \in PT \longrightarrow (\forall T")(T" \in PT)(T" \ne T')[f(T') \geq  f(T")]$.
+
+
+\end{itemize}
+
+
+\subsection{Classificação dos Casos de Testes}
+
+
+Segundo \cite{Yoo:2012:RTM:2284811.2284813} categorizam os casos de teste em cinco classes. As três primeiras classes consistem em casos de teste que já existem em $T$.
+
+\begin{itemize}
+  \item \textbf{Reutilizável}: Os casos de teste reutilizáveis executam apenas as partes do programa que permanecem inalteradas entre duas versões, ou seja, as partes do programa que são comuns a $P$ e $P'$. Não é necessário executar esses casos de teste para testar $P'$; no entanto, eles são chamados de reutilizáveis porque ainda podem ser retidos e reutilizados para o teste de regressão das futuras versões do $P$.
+  \item \textbf{Retestável}: Casos de teste retestáveis executam as partes de P que foram alteradas em $P'$. Assim, os casos de teste retestáveis devem ser reexecutados para testar $P'$.
+  \item \textbf{Obsoleto}: Os casos de teste podem se tornar obsoletos porque (1) sua relação de entrada / saída não é mais correta devido a mudanças nas especificações, (2) eles não testam mais o que foram projetados para testar devido a modificações no programa ou (3) casos de teste ``estruturais'' que não mais contribuem para a cobertura estrutural do programa.
+
+As duas classes restantes consistem em casos de teste que ainda precisam ser gerados para o teste de regressão de $P'$.
+
+\item \textbf{Novo-estrutural}: Novos casos de teste estrutural testam as construções modificadas do programa, fornecendo cobertura estrutural das partes modificadas em $P'$.
+
+
+\item \textbf{Nova especificação}: Casos de teste de nova especificação testam as especificações do programa modificado, testando o novo código gerado a partir das partes modificadas das especificações de $P'$.
+\end{itemize}
+ 
+
+
+\section{Estratégias de Testes de Aplicações para Dispositivos Móveis}\label{sec:testemobile}
+
+\textcolor{blue}{Testes de \ac{APPS} Android apresentam alguns objetivos específicos, tais como: concorrência, segurança, performance, eficiência energética, compatibilidade, detecção de defeitos} \cite{8453877}.
+
+Considerando a complexidade no desenvolvimento de \ac{APPS} a estratégia de testes adota os princípios básicos de todo teste de software, contudo, devido a natureza única desses aplicativos, faz-se necessário considerar várias abordagens de testes especializadas \cite{PRESSMAN2016}:
+
+
+\begin{itemize}
+
+    \item \textbf{Teste da experiência do usuário}: Para garantir que o aplicativo cumpra as expectativas de usabilidade e acessibilidade dos envolvidos em todos os dispositivos suportados, os usuários são incluídos no início do processo de desenvolvimento.
+    
+    \item \textbf{Teste de compatibilidade de dispositivo}: Os testadores verificam se o aplicativo funciona corretamente considerando as combinações de hardware e software exigidas.
+    
+    \item \textbf{Teste de desempenho}: Os testadores verificam os requisitos não funcionais exclusivos dos dispositivos móveis (tempo de download, velocidade do processador, capacidade de armazenamento, disponibilidade de energia).
+    
+    \item \textbf{Teste de conectividade}: Os testadores verificam se o aplicativo consegue acessar quaisquer redes ou \textit{web services} necessários e se pode tolerar acesso à rede fraco ou interrompido.
+    
+    \item \textbf{Teste de segurança}: Os testadores verificam se o aplicativo não compromete os requisitos de privacidade ou segurança de seus usuários.
+    
+    \item \textbf{Teste em condições naturais}: O aplicativo é testado sob condições realistas em dispositivos reais, em uma variedade de ambientes de rede em todo o mundo.
+    
+    \item \textbf{Teste de certificação}: Os testadores verificam se o aplicativo atende aos padrões estabelecidos pelas lojas de aplicativo que vão distribuí-lo.
+
+\end{itemize}
+
+
+\section{Síntese do Capítulo}\label{sec:sintesecapitulo}
+
+O presente capítulo apresentou os conceitos fundamentais para compreensão do estudo proposto. Na Seção \ref{sec:evolucaodesoftware} abordamos sobre o processo de evolução de software. Na Seção \ref{sec:qualidadedesoftware} definimos o conceito de qualidade e sua importância no processo de desenvolvimento de software. A Seção \ref{sec:testesdesoftware} apresenta diversos conceitos sobre teste de software. Na Seção \ref{sec:testesregressao} tratamos sobre uma técnica distinta de testes, denominada teste de regressão. E, na Seção \ref{sec:testemobile} apresentamos as estratégias para testes de aplicações para dispositivos móveis, segundo a visão de \citeonline{PRESSMAN2016}.
