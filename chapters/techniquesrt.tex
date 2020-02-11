@@ -32,12 +32,17 @@ Executando essas etapas, uma técnica de seleção de teste de regressão aborda
 
 As técnicas de seleção de teste de regressão tem como foco o problema 1, ou seja, selecionar um subconjunto de teste de $T$, $T'$ com o qual testar $P'$, garantindo assim que as mudanças realizadas não modificaram o funcionamento do software. Essas técnicas localizam testes em $T$ que expõem falhas em $P'$.
 
-Em relação aos testes: \cite{536955}
+Algumas premissas fundamentais em relação a técnicas de seleção de teste de regressão: \cite{536955}
 \begin{itemize}
-    \item Um teste $t$ detecta uma falha em $P'$ se ele faz com que $P'$ falhe. Neste caso, $t$ é um revelador de falhas de $P'$.
-    \item 
+    \item Um teste $t$ detecta uma falha em $P'$ se ele faz com que $P'$ falhe. Neste caso pode-se dizer que $t$ é um revelador de falhas de $P'$.
+    \item Um programa $P$ falha em $t$ se, quando $P$ for testado com $t$, $P$ produzir uma saída incorreta de acordo com $S$.
+    \item Uma técnica de seleção de teste de regressão pode selecionar um subconjunto do conjunto de testes em $T$ que revelam falhas para $P'$. Nessas condições pode-se dizer que essa técnica não omite testes em $T$ que possam revelar falhas em $P'$.
+    \item Um teste $t$ é revelador de modificações para $P$ e $P'$ se, e somente se, faz com que as saídas de $P$ e $P'$ sejam diferentes.
+    \item O teste $t$ é considerado obsoleto para o programa $P'$ se e somente se $t$ especificar uma entrada para $P'$ que, de acordo com $S'$, é inválida para $P'$ ou $t$ especificar uma relação de entrada-saída inválida para $P'$.
 \end{itemize}
 
 \section{Técnicas de Seleção}
+
+A literatura apresenta diversos estudos sobre técnicas de seleção de teste de regressão, tais como, revisões sistemáticas, \textit{survey}, estudos empíricos: \cite{WHITE1991}, \cite{536955}, \cite{630875}, \cite{Rosenblum97acomparative}, \cite{Rothermel2000},  \cite{Graves:2001:ESR:367008.367020},    \cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
 
 \section{Síntese do Capítulo}
