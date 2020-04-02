@@ -365,6 +365,41 @@ As duas classes restantes consistem em casos de teste que ainda precisam ser ger
 
 \item \textbf{Nova especificação}: Casos de teste de nova especificação testam as especificações do programa modificado, testando o novo código gerado a partir das partes modificadas das especificações de $P'$.
 \end{itemize}
+
+\section{Técnicas de seleção de teste de regressão}\label{sec:rts}
+
+
+Em virtude da necessidade de técnicas \textbf{eficientes}, que determinam o subconjunto apropriado de casos de testes a serem reexecutados, e de técnicas \textbf{precisas} que omitem casos de testes que não são reveladores de modificação \cite{Ammann:2008:IST:1355340}, ao longo de décadas diversos estudos são realizados para prover essas técnicas \cite{WHITE1991}, \cite{Graves:2001:ESR:367008.367020}, \cite{630875}, \cite{536955}, \cite{ENGSTROM201014},\cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
+
+As técnicas podem ser categorizadas, para que sejam avaliadas e comparadas, em quatro categorias: inclusividade, precisão, eficiência e generalidade. A \textbf{inclusividade} mede o quanto uma técnica escolhe testes que farão com que o programa modificado produza uma saída diferente do programa original expondo falhas causadas por modificações. A \textbf{precisão} mede a capacidade de uma técnica evitar a escolha de testes que não farão com que o programa modificado produza resultados diferentes do programa original. A \textbf{eficiência} mede o custo computacional e, portanto, a praticidade de uma técnica. A \textbf{generalidade} mede a capacidade de uma técnica lidar com construções de linguagem realistas e diversificadas, modificações de código arbitrariamente complexas e aplicativos de teste realistas \cite{536955}.
+
+As técnicas de seleção reduzem o custo do teste de um programa modificado, pois, reutilizam testes existentes e identificam partes do programa modificado ou sua especificação que deve ser testada. Estas técnicas diferem da técnica de reexecução de todos os casos de teste da versão original. Segundo \citeonoline{WHITE1991} uma técnica de seleção é mais econômica que a técnica de reexecução de todos os casos de teste, se o custo de selecionar um subconjunto reduzido de testes a executar for menor que o custo de executar os testes que a técnica de seleção omitir.
+
+Os procedimentos fundamentais executados por uma técnica de seleção de teste de regressão são: \cite{536955}
+
+\begin{enumerate}
+    \item Selecionar $T'$ $\subseteq$ $T$, um conjunto de casos de testes para executar em $P'$.
+    \item Testar $P'$ com $T'$, para estabelecer a correção de $P'$ em relação a $T'$.
+    \item Se necessário, criar $T''$, um novo conjunto de casos de teste funcional ou estrutural para testar $P'$.
+    \item Testar $P'$ com $T''$, para estabelecer a correção de $P'$ em relação a $T''$.
+    \item Crie $T'''$, um novo conjunto de casos de testes e histórico de testes para $P'$, de $T$, $T'$, e $T''$.
+\end{enumerate}
+
+Executando essas etapas, uma técnica de seleção de teste de regressão aborda quatro problemas. A etapa 1 refere-se ao problema de selecionar um subconjunto de testes $T'$ de $T$ com o qual possa testar $P'$. A etapa 3 refere-se ao problema de cobertura, ou seja, identificar a necessidade de criação de testes adicionais. As etapas 2 e 4 tratam o problema de executar testes com eficiência, verificando se os resultados estão corretos. A etapa 5 refere-se ao problema de manutenção do conjunto de testes, atualizando e armazenando as informações de teste.
+
+As técnicas de seleção de teste de regressão tem como foco o problema 1, ou seja, selecionar um subconjunto de teste de $T$, $T'$ com o qual testar $P'$, garantindo assim que as mudanças realizadas não modificaram o funcionamento do software. Essas técnicas localizam testes em $T$ que expõem falhas em $P'$.
+
+Algumas premissas fundamentais em relação a técnicas de seleção de teste de regressão: \cite{536955}
+\begin{itemize}
+    \item Um teste $t$ detecta uma falha em $P'$ se ele faz com que $P'$ falhe. Neste caso pode-se dizer que $t$ é um revelador de falhas de $P'$.
+    \item Um programa $P$ falha em $t$ se, quando $P$ for testado com $t$, $P$ produzir uma saída incorreta de acordo com $S$.
+    \item Uma técnica de seleção de teste de regressão pode selecionar um subconjunto do conjunto de testes em $T$ que revelam falhas para $P'$. Nessas condições pode-se dizer que essa técnica não omite testes em $T$ que possam revelar falhas em $P'$.
+    \item Um teste $t$ é revelador de modificações para $P$ e $P'$ se, e somente se, faz com que as saídas de $P$ e $P'$ sejam diferentes.
+    \item O teste $t$ é considerado obsoleto para o programa $P'$ se e somente se $t$ especificar uma entrada para $P'$ que, de acordo com $S'$, é inválida para $P'$ ou $t$ especificar uma relação de entrada-saída inválida para $P'$.
+\end{itemize}
+
+A literatura apresenta diversos estudos sobre técnicas de seleção de teste de regressão, tais como, revisões sistemáticas, \textit{survey}, estudos empíricos: \cite{WHITE1991}, \cite{536955}, \cite{630875}, \cite{Rosenblum97acomparative}, \cite{Rothermel2000},  \cite{Graves:2001:ESR:367008.367020},    \cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
+
  
 
 
@@ -394,6 +429,10 @@ Considerando a complexidade no desenvolvimento de \ac{APPS} a estratégia de tes
 \end{itemize}
 
 Testes de \ac{APPS} Android apresentam alguns objetivos específicos, tais como: concorrência, segurança, performance, eficiência energética, compatibilidade, detecção de defeitos \cite{8453877}.
+
+\section{Ferramentas de Teste de Regressão para \ac{APPS} Android}\label{toolsappsAndroid}
+
+Tanto a literatura, quanto o mercado, propõe ferramentas para automatizar o processo de testes em \ac{APPS} Android. As ferramentas podem ser gratuitas ou proprietárias, e estão focadas em diferentes tipos de testes no processo de desenvolvimento dos apps. A seguir elencamos algumas destas ferramentas.
 
 
 \section{Síntese do Capítulo}\label{sec:sintesecapitulo}
