@@ -8,7 +8,7 @@ Após apresentar as técnicas de seleção de testes de regressão encontradas n
 
 Segundo \cite{PSK2001} um \textit{survey} é um sistema abrangente que tem como objetivo coletar informações para descrever, comparar ou explicar conhecimentos, atitudes e comportamentos. A literatura apresenta alguns trabalhos que tem trazem a aplicação de teste de regressão na indústria \cite{Ali2019}, \cite{8094467}, \cite{7102609}, \cite{630875}.
 
-Neste estudo, somos motivados a entender o processo de teste de software, especificamente o teste de regressão no desenvolvimento de aplicativos Android. Portanto, nosso objetivo é investigar como os testadores de apps Android (estudantes ou profissionais) executam o processo de teste de aplicativos após realizar uma manutenção / atualização de software. Para atingir nosso objetivo, definimos as seguintes Questões de Pesquisa (RQ):
+Definimos as seguintes Questões de Pesquisa (RQ):
 
 \begin{enumerate}[label=\bf QP\arabic*,leftmargin=1.8cm]
     
@@ -22,11 +22,10 @@ Neste estudo, somos motivados a entender o processo de teste de software, especi
 
 \section{Metodologia de Pesquisa}\label{rmsurvey}
 
-Como nossas questões de pesquisa visam coletar informações de estudantes e profissionais, escolhemos o \textit{Survey} como instrumento de pesquisa.
+Este \textit{Survey} tem como objetivo compreender o processo de teste de aplicativos Android, o conhecimento e o uso das ferramentas encontradas na literatura e aquelas amplamente aplicadas na indústria e o processo de teste de regressão. 
 
-\subsection{\textit{Survey}}
+Esta seção abrange os detalhes do planejamento, procedimentos de execução e relatórios dos resultados desejados e alcançados. Utilizamos a metodologia proposta por Kasunic \cite{Kasunic2005DesigningAE} e aplicamos os princípios de pesquisa definidos por Kitchenham et al. \cite{Kitchenham:2002:PSR:566493.566495}.
 
-Este \textit{Survey} visa coletar todas as informações relevantes sobre o tema proposto, mas mantendo-a breve. Nossa pesquisa inclui perguntas para entender o processo de teste de aplicativos Android, o conhecimento e o uso das ferramentas propostas pela literatura e pelo mercado, e o processo de teste de regressão. Utilizamos a metodologia proposta por \citeonline{Kasunic2005DesigningAE} e aplicamos os princípios de pesquisa definidos por \citeonline{Kitchenham:2002:PSR:566493.566495}.
 
 \subsection{Identificação do Público Alvo}
 
@@ -40,23 +39,25 @@ Para obter resultados válidos, selecionamos como público-alvo estudantes e pro
 
 \subsection{Design do Questionário}
 
-O \textit{Survey} é dividido em quatro seções. A Seção I refere-se ao termo de consentimento livre e esclarecido. A seção II refere-se à identificação do participante. Consiste em 13 perguntas, a maioria das quais são obrigatórias (8 perguntas de múltipla escolha, 3 perguntas subjetivas e 2 perguntas na caixa de seleção). Essas perguntas se referem a idade, sexo, educação, área de treinamento, conhecimento e experiência em testes de software e aplicativos Android. A Seção III trata do processo de teste de aplicativos Android. 
-É composto por 16 perguntas, a maioria das quais são obrigatórias (7 perguntas de múltipla escolha, 3 subjetivas e 6 de caixa de seleção). Essas perguntas tratam de como o processo de teste de software é realizado pelos participantes, bem como o uso de ferramentas para automatizar o processo de teste e se eles estão ou não satisfeitos com as ferramentas existentes. Finalmente, a Seção IV se refere às considerações finais. 87\% das perguntas eram obrigatórias. Abaixo, descrevemos as metas do questionário.
+
+O \textit{Survey} é dividido em quatro seções. A Seção I refere-se ao termo de consentimento livre e esclarecido. A seção II refere-se à identificação do participante. Consiste em 13 perguntas, a maioria das quais são obrigatórias (8 perguntas de múltipla escolha, 3 subjetivas e 2 de seleção). Essas perguntas se referem a informações demográficas, área de formação, conhecimento e experiência em testes de software e testes de aplicativos Android. A Seção III trata do processo de teste de aplicativos Android. Consiste em 16 perguntas, a maioria das quais são obrigatórias (7 perguntas de múltipla escolha, 3 perguntas subjetivas e 6 perguntas na caixa de seleção). Essas perguntas tratam de como o processo de teste de software é realizado pelos participantes, bem como o uso de ferramentas para automatizar o processo de teste e se eles estão ou não satisfeitos com as ferramentas existentes. Finalmente, a Seção IV refere-se às considerações finais. 87\% das perguntas eram obrigatórias. A seguir, descrevemos os objetivos de cada seção do questionário.
+
 
 \begin{itemize}
-    \item \textbf{Perfil dos entrevistados:} pretendemos identificar o perfil dos entrevistados, com informações sobre sexo, idade, escolaridade, área de treinamento, certificações de testes, nível de conhecimento e experiência em testar softwares e, especificamente, em aplicativos Android.
+    \item \textbf{Perfil dos entrevistados:} pretendemos identificar o perfil dos entrevistados, com informações sobre sexo, idade, escolaridade, área de formação, certificações de teste, nível de conhecimento e experiência em testes de software e, especificamente, em aplicativos Android.
     
-    \item \textbf{Foco da atividade de teste:} procuramos identificar se os testes realizados são funcionais ou estruturais. Além disso, queremos identificar quais são os tipos de testes realizados nos projetos atuais, como: teste de \ac{GUI}, ou Interface Gráfica do Usuário, teste de unidade, teste de integração, teste de regressão e outros.
+    \item \textbf{Foco da atividade de teste:} procuramos identificar se os testes realizados são funcionais ou estruturais. Além disso, queremos identificar os tipos de testes realizados nos projetos atuais, como: teste de \ac{GUI}, teste de unidade, teste de integração, teste de regressão, etc.
     
-    \item \textbf{Automação do processo de teste:} pretendemos identificar se os testes são realizados manualmente ou de forma automatiza. Além disso, queremos identificar quais ferramentas são usadas. No questionário, listamos ferramentas para testar aplicativos Android, encontradas na literatura e na indústria. Assim, pretendemos investigar se as ferramentas listadas na literatura também são conhecidas e usadas pelos participantes da pesquisa. A Tabela \ref{table:androidtools} mostra um conjunto de ferramentas de teste para aplicativos Android.
+    \item \textbf{Automação do processo de teste:} pretendemos identificar se os testes são realizados de forma manual ou automatizada. Além disso, queremos identificar o suporte ferramental utilizado pelos entrevistados. No questionário, listamos ferramentas para testar aplicativos Android, encontradas na literatura e aplicadas na indústria. Portanto, poderíamos investigar se as ferramentas listadas na literatura também são conhecidas e utilizadas pelos entrevistados. A Tabela \ref{table:androidtools} mostra o conjunto de ferramentas de teste para aplicativos Android sobre as quais perguntamos aos entrevistados.
     
-    \item \textbf{Compreender o processo de teste de regressão:} pretendemos identificar se os participantes realizam o teste de regressão após realizar a manutenção (atualizações) nos aplicativos Android. Estamos interessados em descobrir se: (i) o processo é feito manualmente ou automatizado; (ii) alguma técnica de seleção é aplicada; (iii) são utilizadas ferramentas, encontradas na literatura ou disponíveis na indústria; (iv) se estão satisfeitos com as ferramentas existentes; e (v) se e por que consideram relevante a execução do teste de regressão.
+    \item \textbf{Compreender o processo de teste de regressão:} pretendemos identificar se os nossos participantes realizam testes de regressão após realizar manutenção em aplicativos Android. Estamos interessados em descobrir se: (i) o processo é feito manualmente ou automatizado, (ii) é aplicada alguma técnica de seleção de caso de teste, (iii) são utilizadas ferramentas, encontradas na literatura ou aplicadas na indústria, (iv) se estão satisfeitos com as ferramentas existentes; e (v) se e por que consideram a execução de testes de regressão como relevante.
     
 \end{itemize}
 
 \subsection{Projeto Piloto}
 
-Aplicamos um piloto com três participantes, dois profissionais e um pesquisador, todos trabalhando com testes de aplicativos Android. Para a versão piloto do questionário, adicionamos uma seção de avaliação em que os participantes puderam fazer contribuições sobre a estrutura do questionário e indicar sugestões de melhorias. A seção de avaliação apresentou questões relacionadas à adequação das questões em relação ao tema da pesquisa; o número de perguntas a serem respondidas; o tempo necessário para responder ao formulário; e relevância da pesquisa, como segue:
+Aplicamos um piloto com três participantes, dois profissionais e um pesquisador, todos trabalhando com testes de aplicativos Android. Para a versão piloto do questionário, adicionamos uma seção de avaliação em que os participantes puderam fazer contribuições sobre a estrutura do questionário e indicar sugestões de melhorias. A seção de avaliação apresentou questões relacionadas à adequação das questões em relação ao tema da pesquisa; o número de perguntas a serem respondidas; o tempo necessário para responder ao formulário; e a relevância da pesquisa, como segue:
+
 
 \begin{enumerate}
     \item Em uma escala de 1 a 5, onde 1 é igual a ruim e 5 é igual a ótimo, como você avalia o número de perguntas no formulário?
@@ -68,112 +69,81 @@ Aplicamos um piloto com três participantes, dois profissionais e um pesquisador
 
 O \textit{feedback} sugeriu pequenas modificações na estrutura do questionário. As mudanças incluíram: adicionar opções de resposta a várias perguntas, alterar palavras para melhorar o entendimento e destacar o objetivo da pergunta para diferenciar questões que têm contextos semelhantes. Com base nas melhorias identificadas, uma segunda versão do questionário foi gerada.
 
+
 \subsection{Distribuição do Questionário}
 
-Para criar o questionário, usamos a ferramenta online Formulários Google \footnote{\url{http://docs.google.com/forms}}. O processo de ampla divulgação desta pesquisa foi realizado em 20 de janeiro de 2020 e ficou disponível por 30 dias. O link do questionário foi enviado por e-mails individuais, listas de e-mail e mídias sociais. O questionário também foi enviado por e-mail a empresas que trabalham com o desenvolvimento de aplicativos Android.
+Para criar o questionário, usamos a ferramenta online Formulários Google\footnote{\url{http://docs.google.com/forms}}. O processo de ampla divulgação desta pesquisa foi realizado em 20 de janeiro de 2020 e ficou disponível por 30 dias. O link do questionário foi enviado por e-mails individuais, listas de e-mail e mídias sociais. O questionário também foi enviado por e-mail para empresas que trabalham com o desenvolvimento de aplicativos Android. O formulário foi enviado juntamente com um texto de convite, com informações básicas sobre o objetivo do estudo e a importância do estudo. Os participantes também foram informados sobre as políticas de privacidade do estudo de maneira clara e detalhada.
 
-O formulário foi enviado juntamente com um texto de convite, com informações básicas sobre o objetivo do estudo e a importância da participação do entrevistado. Os participantes também foram informados sobre as políticas de privacidade do estudo de maneira clara e detalhada.
 
 \section{Resultados}\label{resultssurvey}
 
-Nossa pesquisa recebeu 32 respostas para análise. Esta seção relata os resultados obtidos em nossa pesquisa.
+O \textit{Survey} coletou 32 respostas. Em relação à demografia dos entrevistados, 78,1\% eram homens e 21,9\% mulheres; 37,5\% estavam entre 20 e 25 anos, 28,1\% tinham entre 26 e 30 anos, 18,8\% tinham entre 31 e 35 anos, e 15,6\% tinham mais de 35 anos.
 
-\subsection{Perfil dos Entrevistados}
+Em relação ao nível de escolaridade dos entrevistados, 18,8\% possuíam ensino médio; 3,1\% possuíam curso técnico; 15,6\% eram estudantes de graduação; 34,4\% possuíam diploma de ensino superior; 6,2\% tinham cursos de especialização; 18,8\%
+eram Msc.; e 3,1\% eram doutores. Além disso, 87,5\% eram provenientes de Ciência da Computação ou áreas afins, 3,1\% de Engenharia Elétrica, 3,1\% de outras engenharia, e 6,3\% possuíam formação superior em outras áreas. A respeito de cursos e certificações em testes, 56,2\% possuem pelo menos um deles. A maioria dos cursos citados foram nas seguintes ferramentas: Angular, Apium, JUnit, Selenium, e SonarQube. A certificação citada foi a \textit{Certified Tester Foundation} (CTFL) da \textit{International Software Testing Qualifications Board}.
 
-Quanto ao perfil dos participantes, 78,1\% eram homens e 21,9\% mulheres; 37,54\% tinham entre 20 e 25 anos, 28,2\% entre 26 e 30 anos, 18,7\% entre 31 e 35 anos e 15,6\% tinham mais de 35 anos. Mais de 50\% dos entrevistados tinham entre 20 e 30 anos.
+Em relação ao seu papel em projetos Android, 18,8\% dos entrevistados declararam que trabalham como autônomos; 62,5\% trabalha / pesquisa ou já trabalhou em uma empresa de software, 40,6\% eram estudantes da área e 3,1\% afirmaram que
+eles nunca trabalharam em projetos de teste para aplicativos Android. Os entrevistados foram de sete estados diferentes no Brasil.
 
-Em relação ao nível de escolaridade dos participantes, 18,8\% possuíam ensino médio; 3,1\% possuíam curso técnico; 15,6\% eram estudantes de graduação; 34,4\% possuíam diploma de ensino superior; 6,3\% possuíam cursos de especialização; 18,8\% eram Mestres.; e 3,1\% eram doutores. Além disso, 87,5\% eram de computação ou áreas afins, 3,1\% de engenharia elétrica, 3,1\% de outras engenharias e 6,2\% possuíam formação superior em outras áreas. Quanto aos cursos e certificações em testes, 56,3\% responderam que possuíam e 43,8\% responderam que não. Os cursos mais citados foram nas seguintes ferramentas: Angular, Apium, JUnit, Selenium e SonarQube. A certificação citada foi o Certified Tester Foundation Level (CFTL).
+Em relação à experiência de trabalho em teste de software, 25\% dos entrevistados afirmaram ter até 1 ano de experiência, 28,1\% tinham entre 1 e 3 anos experiência, 28,1\% possuíam entre 3 e 5 anos de experiência, 15,6\% entre 5 e 10 anos e apenas 3,2\% tinham mais de 10 anos de experiência. Considerando sua experiência com testes de aplicativos Android, 56,3\% tinham até 1 ano de experiência, 21,9\% tinham entre 1 e 3 anos de experiência, 15,6\% entre 3 e 5 anos de experiência e 6,2\% entre 5 e 10 anos de experiência.
 
-Em relação ao papel do respondente nos projetos Android, 18,8\% trabalham de forma autônoma; 62,5\% trabalham/pesquisam ou já trabalharam em uma empresa, 40,6\% eram estudantes na área e 3,1\% afirmaram que nunca trabalharam em projetos de teste para aplicativos Android. Os entrevistados eram de sete estados diferentes no Brasil.
+Quando perguntados sobre seu nível de conhecimento em testes de aplicativos Android, comparados para outros profissionais, 15,6\% responderam que consideravam seu nível de
+muito baixo, 25\% baixo, 21,9\% regular, 21,9\% bom e 15,6\% excelente.
 
-Quanto a experiência profissional, 25\% dos entrevistados afirmaram ter até 1 ano de experiência na área de teste de software. 28,1\% possuíam entre 1 e 3 anos de experiência, 28,1\% possuíam entre 3 e 5 anos de experiência, 15,6\% entre 5 e 10 anos e apenas 3,1\% possuíam mais de 10 anos de experiência. Considerando a experiência profissional específica na área de testes de aplicativos Android, 56,3\% possuíam até 1 ano de experiência, 21,9\% possuíam entre 1 e 3 anos de experiência, 15,6\% entre 3 e 5 anos e 6,3\% entre 5 e 10 anos de experiência. Quando questionados sobre seu nível de conhecimento nos testes de aplicativos Android em comparação com outros profissionais, 15,6\% responderam que consideravam seu nível muito baixo, 25\% baixo, 21,9\% regular, 21,9\% bom e 15,6\% excelente.
+Além disso, em relação à principal função do projeto atual na empresa em que trabalham, foram mencionados: analista de qualidade, analista de sistemas, analista de teste ou engenheiro de teste, design e arquitetura de teste automatizado, coordenador de inspeção, coordenador de inspeção, desenvolvedor e gerente de projeto.
 
-Além disso, em relação ao papel principal no projeto atual da empresa, foram mencionados os seguintes cargos: analista de qualidade, analista de sistemas, analista / engenheiro de teste, arquitetura e design de teste automatizado, coordenador de inspeção, desenvolvedor e gerente de projeto. Em relação às atividades que realizam no processo de teste, 75\% trabalham com criação e design de casos de teste, 84,4\% trabalham com a execução de casos de teste, 3,1\% trabalham com automação de testes e 3,1\% trabalham com \textit{report} de teste para o cliente .
+Em relação às atividades que mais realizam, 75\% trabalham com criação e design de casos de teste, 84,4\% trabalham com a execução de casos de teste, 3,1\% trabalham com automação de teste e 3,1\% trabalham com o relatório de teste para o cliente. Para esta pergunta, os entrevistados podem verificar mais de uma opção.
 
 \subsection{Questões de Pesquisa}
 
-Em seguida, relatamos os resultados dessa avaliação empírica, com base no conjunto de perguntas de pesquisa apresentadas na Seção \ref{rqsurvey}.
+Em seguida, relatamos os resultados da pesquisa, com base no conjunto das questões de pesquisa apresentadas anteriormente na na Seção \ref{rqsurvey}.
 
 \begin{enumerate}[label=\bf QP\arabic*]
     
 \item \textbf{Foco da atividade de teste:}
     
-Esta questão de pesquisa tem como objetivo investigar se os testes realizados pelos testadores são funcionais e/ou estruturais. 
-    
-Observamos que a maioria dos testes realizados pelos entrevistados são testes funcionais, também conhecidos como testes “caixa preta”, correspondendo a 90,6\%. Os testes estruturais (“caixa branca”) são realizados por 25\% dos participantes. Os testes de “caixa cinza”, nos quais o acesso ao código fonte é parcial, são realizados por 21,9\% dos participantes. 
-    
-Quando perguntados sobre os tipos de testes que eles executam nos projetos Android, notamos que o teste de \ac{GUI} é o teste mais executado. Este teste refere-se ao teste da interface do aplicativo e foi seguida pelos testes de validação, regressão, sistema, integração e unidade. A Figura \ref{} mostra a distribuição das categorias de teste.
+Observamos que a maioria dos testes realizados pelos entrevistados são testes funcionais, correspondendo a 90,6\%. Os testes estruturais são realizados por 25\% dos entrevistados. Os testes de “caixa cinza”, nos quais o acesso ao código fonte é parcial, são realizados por 21,9\% dos entrevistados.
+
+Quando perguntado sobre os tipos de testes que eles executam nos projetos Android, o teste da GUI foi o mais executado e foi seguido pelos testes de validação, regressão, sistema, integração e unidade. A Figura \ref{figure:s_tipostestes} mostra a distribuição das categorias de teste. Vale ressaltar que na questão referida os respondentes puderam selecionar mais de uma opção.
     
 \item \textbf{Automação do processo de teste:}
 
-Esta questão de pesquisa tem como objetivo identificar se os testes são realizados manualmente ou de forma automatizada. 
-    
-34,4\% dos entrevistados responderam que executam os testes de forma manual, sem usar nenhuma ferramenta dedicada a testes; 15,6\% disseram que realizam testes automatizados; e 50\% responderam que realizam testes manualmente e automatizados. 
-    
-No questionário, apresentamos aos participantes as ferramentas encontradas na literatura, disponíveis no mercado e também na literatura cinza. Nosso objetivo era identificar quais ferramentas são mais usadas pelos participantes. Além disso, além das ferramentas apresentadas no questionário, os entrevistados também indicaram outros. A Figura \ref{} mostra que as ferramentas mais usadas são Appium, UI Automator, Monkey e Katalon. Alguns participantes citaram que usam ferramentas desenvolvidas pela própria equipe.
+34,4\% dos entrevistados responderam que realizam testes do Android manualmente, sem usar nenhuma ferramenta de suporte; 15,6\% afirmaram realizar testes automatizados; e 50\% responderam que realizam testes manuais e automatizados. Além disso, além das ferramentas apresentadas no questionário (da literatura e da indústria), os entrevistados também podem indicar outros. A Figura \ref{figure:s_ferramentastestes} mostra que as ferramentas mais usadas são Appium, UI Automator, Monkey e Katalon. Além disso, alguns entrevistados relataram que é uma prática comum para suas empresas criar sua própria ferramenta de teste, para atender às suas demandas. Nesta pergunta, mais de uma opção pode ser verificada.
     
 \item \textbf{Teste após manutenção (atualização) de apps Android:}
 
-Esta pergunta de pesquisa tem como objetivo identificar se e como os entrevistados realizam testes de regressão.
+Quando perguntados sobre a execução de qualquer tipo de teste após as tarefas de manutenção, 40,6\% responderam que sempre realizam testes, 12,5\% responderam que realizam frequentemente, 21,9\% responderam que às vezes realizam testes, 9,4\% responderam que raramente testam e 15,6\% responderam que nunca testam.
 
-Quando questionados sobre a realização de qualquer tipo de teste após a manutenção (atualização) no app Android, para garantir que a manutenção realizada não altere o comportamento funcional do aplicativo, 40,6\% responderam que sempre realizam testes, 12,5\% responderam que realizam frequentemente, 21,9\% responderam que às vezes realizam testes, 9,4\% responderam que raramente testam e 15,6\% responderam que nunca testam.
+Em relação à automação do processo de teste durante a manutenção, 25\% responderam que os testes são manuais, 15,6\% responderam que os testes são realizados de forma automatizada, 53,1\% responderam que realizam testes manualmente e automatizados e 6,3\% responderam que não testam os aplicativos após realizar a manutenção.
 
-Em relação à automação do processo de teste durante a manutenção (atualização), 25\% dos participantes informaram que os testes são manuais, 15,6\% informaram que os testes são realizados de forma automatizada, 53,1\% responderam que realizam os testes manualmente e automatizados, e 6,3\% relataram que não testam os aplicativos após realizar a manutenção (atualização).
+A literatura sobre técnicas de seleção para testes de regressão aponta alguns procedimentos que visam reduzir o número de testes a serem reexecutados [3] - [10]. Nesse sentido, pedimos aos participantes que entendessem quais desses procedimentos são realizados durante o processo de teste após o lançamento de uma nova versão do aplicativo.
 
-A literatura sobre técnicas de seleção para testes de regressão aponta alguns procedimentos que visam reduzir o número de testes a serem repetidos \cite{KAZMI2017}, \cite{Yoo:2012:RTM:2284811.2284813}, \cite{ENGSTROM201014}, \cite{Graves:2001:ESR:367008.367020}, \cite{Rothermel2000}, \cite{536955}, \cite{WHITE1991}, \cite{65194}.
+Observamos que o processo mais executado é executar novamente todos os casos de teste da versão original para testar a versão atualizada do aplicativo. Essa é a técnica essencial do processo de teste de regressão, embora não seja a mais eficiente, principalmente se o número de casos de teste aumentar [26]. A Figura 3 mostra esses resultados.
 
-Assim, perguntamos aos participantes quais desses procedimentos são realizados durante o processo de teste após a atualização (manutenção) do aplicativo.
 
-Observamos que o processo mais executado é executar novamente todos os casos de teste da versão original para testar a versão atualizada do aplicativo. Essa é a técnica essencial do processo de teste de regressão, embora não seja a mais eficiente, principalmente se o número de casos de teste aumentar. A Figura \ref{} mostra esses resultados.
+Quanto ao uso de ferramentas no processo de teste de regressão, 31,2\% responderam que não usam ferramentas, enquanto 68,8\% responderam que utilizam ferramentas no processo de teste de regressão. Além disso, indicamos no questionário um conjunto de ferramentas disponíveis para testes de regressão de aplicativos Android e solicitamos aos participantes que indiquem quais eles costumam usar. Eles estavam livres para mencionar outras ferramentas, que não estão listadas no questionário. A Figura 4 apresenta o principal resultado para esta pergunta. Observamos que ATOM e Redroid são as ferramentas mais utilizadas (na literatura) e MonkeyRunner (na indústria).
 
-Quanto ao uso de ferramentas no processo de teste de regressão, 31,3\% dos participantes relataram não usar ferramentas, enquanto 68,8\% relataram que utilizam ferramentas no processo de teste de regressão. Além disso, apresentamos aos participantes um conjunto de ferramentas disponíveis para testes de regressão de aplicativos Android e solicitamos que indiquem quais eles costumam usar, além de poder citar outras ferramentas que utilizassem. Observamos que as ferramentas mais utilizadas são ATOM e Redroid, encontradas na literatura e Monkey Runner, encontrada no mercado, como mostra a Figura \ref{}.
+Em relação à opinião dos participantes sobre a realização de testes após a manutenção, 96,9\% responderam que consideram isso uma tarefa relevante. Também perguntamos quais são os principais fatores para suas empresas não executarem testes após a manutenção dos aplicativos. Além dos fatores indicados na pesquisa, os entrevistados apontaram outros fatores, como “cultura no processo de desenvolvimento, acreditando que a fixação de uma área não afetará outra” e “pressão do tempo do cliente para lançar o produto no mercado”. mercado para não perder o tempo de colocação no mercado ”.
 
-Quanto a considerar relevante a realização de testes após a manutenção (atualização), 96,9\% responderam que consideram relevante e 3,1\% responderam que não. Também perguntamos quais fatores eles consideram para impedir a execução de testes após a manutenção dos aplicativos (atualização). Além dos fatores indicados na pesquisa, os participantes apontaram outros fatores, como a cultura no processo de desenvolvimento, ao acreditar que o erro em uma parte do app não afetará outra parte e a pressão por parte do cliente para lançar o produto no mercado e assim não perder o tempo de colocação no mercado, como mostra a Figura \ref{}. Observamos que o fator que mais influencia no teste de regressão não está sendo realizado é o tempo reduzido para entregar uma versão atualizada do aplicativo ao cliente.
+A Figura 5 mostra os principais fatores relatados pelos entrevistados. Observamos que o fator que mais influencia o teste de regressão por não ser realizado é o tempo reduzido para entregar uma versão atualizada do aplicativo ao cliente.
 
-Quando perguntados se as ferramentas utilizadas atendem às necessidades para realizar o teste de regressão, 9,4\% disseram que nunca, 9,4\% responderam que raramente, 12,5\% responderam que às vezes, 18,8\% que muitas vezes, 12,5\% responderam que sempre , e 37,5\% responderam que não testam o aplicativo após a manutenção (atualização). Quando perguntados se estavam satisfeitos com as \textit{features} oferecidas pelas ferramentas de teste de apps Android existentes, 43,8\% responderam que sim e 56,3\% responderam que não.
+Quando perguntados se as ferramentas utilizadas atendem às necessidades de realizar testes de regressão, 9,4\% responderam que nunca se encontram, 9,4\% responderam que raramente se encontram, 12,5\% responderam que às vezes se encontram, 18,8\% responderam que geralmente se encontram, 12,5\% responderam que sempre se encontram e 37,4\% responderam que não testam o aplicativo após a manutenção. Quando perguntados se estavam satisfeitos com os recursos oferecidos pelas ferramentas de teste de aplicativos Android existentes, 43,8\% responderam que sim e 56,2 \% responderam que não.
 
 \end{enumerate}
 
 \section{Discussões}\label{discussions}
 
-Nesta seção, discutimos os resultados em quatro aspectos: perfil dos entrevistados, foco da atividade de teste, automação do processo de teste e compreensão do processo de teste de regressão.
 
-\textbf{Perfil dos entrevistados:} A maioria dos entrevistados era do sexo masculino, com idades entre 20 e 30 anos, e 50\% possuíam graduação em Ciência da computação ou áreas afins. Mais de 50\% possuíam certificação na área de testes e possuíam entre 1 a 5 anos de experiência profissional na área de testes. No entanto, em relação à experiência profissional na área específica de teste de aplicativos Android, a maioria dos entrevistados tem até 1 ano de experiência profissional e trabalho/pesquisa em uma empresa. Além disso, observamos que houve uma distribuição próxima entre as pessoas que consideram seu conhecimento nos testes de aplicativos Android como bom ou excelente, e as pessoas que consideram seu conhecimento baixo ou muito baixo. Para as funções desempenhadas nas empresas, elas são diversificadas e as atividades desenvolvidas são principalmente criação/design e execução de casos de teste. Embora existam muitos profissionais treinados na área de teste de software, no que diz respeito ao teste de aplicativos Android, ainda há uma necessidade maior de treinamento, que é uma área em expansão.
-    
-\textbf{Foco da atividade de teste:} Observamos que o teste "caixa preta" é utilizado na maioria dos projetos, sendo apontado por mais de 90,6\% dos participantes. Quanto às categorias de testes realizados, destacam-se o teste \ac{GUI}, teste de validação, teste do sistema e teste de regressão. O teste da GUI é o mais citado pelos participantes, o que é esperado, dada a importância da interface do software e sua usabilidade para dispositivos móveis.
-    
-\textbf{Automação do processo de teste:} Observamos que o processo de automação de teste ainda não é executado majoritariamente, pois apenas 15,6\% dos participantes indicaram realizar testes automatizados. Em relação às ferramentas, observamos que as ferramentas encontradas no mercado foram mais utilizadas que as encontradas na literatura. Como as ferramentas disponíveis na literatura indicada neste artigo são baseadas em técnicas, que se concentram na redução do número de casos de teste a serem reexecutados, o uso dessas ferramentas na indústria pode ser uma solução para reduzir custos e esforços na atividade de teste de regressão, sem perder a qualidade. Também percebemos que, ao lidar com testes de regressão, o uso de ferramentas para automatizar o processo de teste é ainda menor, ao contrário do que a literatura propõe \cite{Ammann:2008:IST:1355340}. Embora mais de 50\% dos participantes apontem que não estão satisfeitos com as ferramentas existentes para testes de regressão, eles não indicam, com precisão, quais requisitos uma ferramenta precisa conter para atender às necessidades da vida cotidiana dos testadores. Perguntamos aos entrevistados quais \textit{features} poderiam ser melhoradas/implementadas. Algumas das respostas relevantes foram:
 
-\begin{itemize}    
-
-    \item "O teste de interface do usuário \ac{GUI} do Android ainda é difícil e demorado de construir".
+\textbf{Perfil dos entrevistados:} 
     
-    \item"A criação e execução dos conjuntos de testes precisam ser automatizadas para permitir uma verificação mais rápida da qualidade do aplicativo após as alterações". 
+\textbf{Foco da atividade de teste:} 
     
-    \item "Acho que os relatórios de execução de teste podem ser emitidos em relação a uma versão anterior e reportar se houve algum caso de teste que não foi coberto na nova versão e que estava sendo coberto na versão anterior".
-    
-    \item "Os testes instrumentados (testes de interface do usuário) no Android podem ter ferramentas que facilitam principalmente o teste de fluxos completos para testes de ponta a ponta."
-    
-\end{itemize}
-
-Isso nos demonstra algumas dificuldades encontradas pelos participantes no uso das ferramentas de teste de apps Android, o que nos permite entender uma das possíveis razões pelas quais a automação do processo de teste de aplicativos Android não é comum.
-
-\textbf{Compreensão do processo de teste de regressão:} Embora mais de 90\% dos participantes considerassem a execução do teste após a manutenção (atualização) de um app Android relevante, apenas 68,8\% deles responderam que realizam esse tipo de teste ao atualizar seus apps. Segundo eles, eles têm pouco tempo para entregar a versão atualizada. No entanto, apenas 53,1\% dos entrevistados indicaram que realizam testes de regressão, o que significa que, talvez, alguns participantes não conseguiram associar o conceito de teste após a manutenção ao teste de regressão. Além disso, a automação do processo de teste de regressão é ainda menor do que no processo de teste durante o desenvolvimento do aplicativo. Percebemos que a técnica mais utilizada para realizar testes de regressão é reexecutar todos os casos de teste da versão anterior, apesar dessa técnica ser apontada pela literatura como uma estratégia inviável. Os entrevistados não têm nenhum processo para selecionar quais testes devem ser mais eficazes para serem executados por meio das atualizações de software. Por exemplo, uma estratégia seria reutilizar casos de teste existentes e excluir casos de teste obsoletos.
+\textbf{Automação do processo de teste:} 
 
 \section{Ameaças à Validade}\label{threatstovalidity}
 
-Nesta seção apresentamos possíveis ameaças à validade deste \textit{Survey}.
 
-\begin{itemize}
-    \item \textbf{Validade interna:} Embora a literatura apresente vários trabalhos referentes às técnicas de teste de regressão, nosso trabalho se concentrou nas técnicas de seleção, considerando o número relevante de pesquisas sobre essas técnicas e sua grande aplicabilidade na área da indústria de software. Para minimizar essa ameaça, realizamos um questionário piloto com três participantes para entender melhor o tema na prática de desenvolvimento e teste de aplicativos.
-    
-    \item \textbf{Validade externa:} Nosso estudo relata um recorte em relação ao processo de teste de aplicativos Android, realizado por estudantes e profissionais, e não pode ser generalizado. Apesar das limitações, fornecemos o procedimento e os dados de pesquisa para permitir a replicação.
-    
-    \item \textbf{Validade à construção:} Em algumas perguntas do questionário que tratamos como testes após realizar a MANUTENÇÃO (ATUALIZAÇÃO), nos referimos ao Teste de Regressão. Isso foi feito para impedir que os participantes pesquisassem o conceito e respondessem, mesmo sem realizar o teste. Por outro lado, alguns participantes com mais experiência podem não ter relacionado esse conceito ao Teste de Regressão.
-    
-    \item \textbf{Validade à conclusão:} Por se tratar de um estudo qualitativo, não usamos argumentos estatísticos para generalizar os resultados. Para reduzir essa ameaça, enviamos o questionário para diferentes estados do Brasil.
-    
-\end{itemize}
 
 \section{Síntese do capítulo}
 
