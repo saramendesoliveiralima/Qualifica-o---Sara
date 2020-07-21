@@ -1,7 +1,6 @@
 \xchapter{Referencial Teórico, Conceitos e Aplicabilidade}{}
 \acresetall 
-O presente capítulo apresenta os conceitos fundamentais necessários para a compreensão do trabalho proposto: evolução de software; qualidade de software; teste de software; teste de regressão e estratégias de testes de aplicações para dispositivos móveis.
-
+O presente capítulo apresenta os conceitos fundamentais necessários para a compreensão do trabalho proposto: evolução de software; qualidade de software; teste de software; teste de regressão, e técnicas de seleção de teste de regressão.
 
 \section{Evolução de Software}\label{sec:evolucaodesoftware}
 
@@ -109,7 +108,7 @@ Um dos resultados do procedimento de teste é gerar os casos de teste para que p
 
 O documento básico para a atividade de teste é o Plano de Testes, no qual se define: objetivos para cada tipo (ou fase de teste); estratégias de teste; cronograma e responsabilidades; procedimentos e padrões a serem usados na execução e na elaboração do relatório de testes; critérios para a conclusão do teste, bem como o sucesso de cada teste \cite{HIRAMA2011}.
 
-\textcolor{blue}{A execução dos testes pode ser feita de forma manual, quando a partir de um roteiro a ser seguido é feita por um profissional de forma manual, ou pode ser feita de forma automatizada, com a utilização de ferramentas que execução dos testes e reportam os resultados.} Para \citeonline{Ammann:2008:IST:1355340}, o teste de software é caro e exige mão de obra intensiva, e requer até 50\% dos custos de desenvolvimento de software e ainda mais para aplicativos críticos de segurança. Faz-se necessário automatizar o máximo possível dos testes de software, reduzindo significativamente o custo, minimizando o erro humano e facilitando o teste de regressão, vide Seção \ref{sec:testesregressao}.
+A execução dos testes pode ser feita de forma manual, quando a partir de um roteiro a ser seguido é feita por um profissional de forma manual, ou pode ser feita de forma automatizada, com a utilização de ferramentas que execução dos testes e reportam os resultados. Para \citeonline{Ammann:2008:IST:1355340}, o teste de software é caro e exige mão de obra intensiva, e requer até 50\% dos custos de desenvolvimento de software e ainda mais para aplicativos críticos de segurança. Faz-se necessário automatizar o máximo possível dos testes de software, reduzindo significativamente o custo, minimizando o erro humano e facilitando o teste de regressão, vide Seção \ref{sec:testesregressao}.
 
 
 \subsection{Técnicas de Teste de Software}
@@ -193,7 +192,12 @@ Segundo \citeonline{HIRAMA2011}, existem ainda outros testes que podem ser aplic
 
 Outros tipos de teste de software relevantes são os testes \textbf{alfa} e \textbf{beta}. Em virtude das dificuldades encontradas pelos desenvolvedores para preverem como o cliente usará o programa, ou, como ele irá interpretar os manuais de usuários, alguns testes são realizados para compreender como será a aceitação do cliente em relação ao software desenvolvido. 
 
-%\textcolor{red}{ESCREVER SOBRE TESTE MANUAL X TESTE AUTOMATIZADO}% 
+
+\subsection{Testes de apps para Android}
+
+Testes de \ac{APPS} Android apresentam alguns objetivos específicos, tais como: concorrência, segurança, performance, eficiência energética, compatibilidade, detecção de defeitos \cite{8453877}.
+
+Tanto a literatura, quanto o mercado, propõe ferramentas para automatizar o processo de testes em \ac{APPS} Android. As ferramentas podem ser gratuitas ou proprietárias, e estão focadas em diferentes tipos de testes no processo de desenvolvimento dos apps conforme \ref{table:androidtools}.
 
 
 \section{Teste de Regressão}\label{sec:testesregressao}
@@ -321,18 +325,7 @@ Algumas premissas fundamentais em relação a técnicas de seleção de teste de
 
 A literatura apresenta diversos estudos sobre técnicas de seleção de teste de regressão, tais como, revisões sistemáticas, \textit{survey}, estudos empíricos: \cite{WHITE1991}, \cite{536955}, \cite{630875}, \cite{Rosenblum97acomparative}, \cite{Rothermel2000},  \cite{Graves:2001:ESR:367008.367020},    \cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
 
- 
-
-
-\section{Testes de aplicativos para Android}\label{sec:testemobile}
-
-%\textcolor{red}{Especificar mais sobre Testes para dispositivos móveis}%
-
-
-Testes de \ac{APPS} Android apresentam alguns objetivos específicos, tais como: concorrência, segurança, performance, eficiência energética, compatibilidade, detecção de defeitos \cite{8453877}.
-
-Tanto a literatura, quanto o mercado, propõe ferramentas para automatizar o processo de testes em \ac{APPS} Android. As ferramentas podem ser gratuitas ou proprietárias, e estão focadas em diferentes tipos de testes no processo de desenvolvimento dos apps conforme \ref{table:apps}.
 
 \section{Síntese do Capítulo}\label{sec:sintesecapitulo}
 
-O presente capítulo apresentou os conceitos fundamentais para compreensão do estudo proposto. Na Seção \ref{sec:evolucaodesoftware} abordamos sobre o processo de evolução de software. Na Seção \ref{sec:qualidadedesoftware} definimos o conceito de qualidade e sua importância no processo de desenvolvimento de software. A Seção \ref{sec:testesdesoftware} apresenta diversos conceitos sobre teste de software. Na Seção \ref{sec:testesregressao} tratamos sobre uma técnica distinta de testes, denominada teste de regressão. E, na Seção \ref{sec:testemobile} tratamos sobre testes de aplicativos para Android, segundo a visão de \citeonline{PRESSMAN2016}.
+O presente capítulo apresentou os conceitos fundamentais para compreensão do estudo proposto. Na Seção \ref{sec:evolucaodesoftware} abordamos sobre o processo de evolução de software. Na Seção \ref{sec:qualidadedesoftware} definimos o conceito de qualidade e sua importância no processo de desenvolvimento de software. A Seção \ref{sec:testesdesoftware} apresenta diversos conceitos sobre teste de software. Na Seção \ref{sec:testesregressao} tratamos sobre uma técnica distinta de testes, denominada teste de regressão. E, na Seção \ref{sec:rts} tratamos sobre as técnicas de seleção de teste de regressão.

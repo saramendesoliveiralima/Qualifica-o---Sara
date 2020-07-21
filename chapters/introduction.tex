@@ -19,21 +19,20 @@ Dentre os domínios de aplicação emergentes, testes de regressão apresentam-s
 
 \section{Problema}\label{sec:problema}
 
-Os dispositivos móveis tem sido cada vez mais utilizados no cotidiano, em alguns casos com maior parcela de mercado do que os tradicionais Desktop \cite{Do2016RedroidAR}. Pesquisas de mercado recentes indicam que o \textbf{Android} é o sistema operacional mais popular para os dispositivos móveis - vide Figura \ref{fig:marketShare}\footnote{\url{http://gs.statcounter.com/os-market-share/mobile/worldwide}}. 
+Os dispositivos móveis tem sido cada vez mais utilizados no cotidiano, em alguns casos com maior parcela de mercado do que os tradicionais Desktop \cite{Do2016RedroidAR}. Pesquisas de mercado recentes indicam que o \textbf{Android} é o sistema operacional mais popular para os dispositivos móveis \footnote{\url{http://gs.statcounter.com/os-market-share/mobile/worldwide}}. 
 
 Segundo \citeonline{Do2016RedroidAR}, a plataforma móvel está se separando de uma variedade de áreas de aplicativos de Desktop, tais como entretenimento, comércio eletrônico e mídia social. Assim, os desenvolvedores são obrigados a produzir \ac{APPS} de alta qualidade, em particular no que diz respeito a requisitos não-funcionais como portabilidade, confiabilidade e segurança.
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1.\textwidth]{images/StatCounter-os_2020.png}
-    \caption{Distribuição mundial do uso de sistemas operacionais para \ac{APPS}.}
-    \label{fig:marketShare}
-\end{figure}
+%\begin{figure}
+    %\centering
+    %\includegraphics[width=1.\textwidth]{images/StatCounter-os_2020.png}
+    %\caption{Distribuição mundial do uso de sistemas operacionais para \ac{APPS}.}
+    %\label{fig:marketShare}
+%\end{figure}
 
 
 Nos últimos anos, uma grande quantidade de pesquisas tem sido realizada para prover uma maior confiabilidade dos \ac{APPS}, por exemplo, aplicando testes automatizados \cite{7927972}, \cite{8424973},\cite{8453877}. No entanto, a maioria das pesquisas está focada no teste de uma versão única de aplicativos móveis \cite{Do2016RedroidAR}. Como os \ac{APPS} evoluem com frequência, é importante que os desenvolvedores façam uso de técnicas de teste de regressão, dado seu potencial em identificar problemas no código decorrentes de mudanças no software \cite{8377661}.
-
 
 Ao tratar de técnicas de teste de regressão, a literatura apresenta diversos trabalhos que fazem uso de técnicas tradicionais, i.e., concebidas para testar sistemas Desktop \cite{536955}, \cite{ENGSTROM201014}. Entretanto, embora muitas abordagens eficientes e eficazes tem sido propostas, há pouca evidência indicando a aplicação direta dessas técnicas para o teste de \ac{APPS} \cite{Do2016RedroidAR}. Um importante fator que causa a incompatibilidade é a diferença entre a arquitetura do sistema da plataforma móvel e a plataforma Desktop.
 
@@ -41,7 +40,7 @@ Segundo \citeonline{5954416}, a qualidade dos \ac{APPS} é geralmente ruim. Um d
 
 Em virtude do crescimento do mercado de dispositivos móveis e da necessidade de produzir \ac{APPS} com qualidade, pesquisas recentes tem apresentado o desenvolvimento de técnicas implementadas por ferramentas de teste de regressão voltadas para aplicações em Android \cite{Do2016RedroidAR}, \cite{Choi:2018:DMA:3180155.3180173}, \cite{8377661}, \cite{5954416}, \cite{7927972}, \cite{8424973}, \cite{6339502}, \cite{6569773}, \cite{7427895}, \cite{7832883}, \cite{7833000}. Alguns desses estudos tratam de experimentos com comprovação empírica para comprovar a eficiência/eficácia da ferramenta proposta neste cenário.
 
-Embora a literatura tenha dedicado esforços à produzir evidências sobre a criação de novas técnicas de teste de regressão para Android, os estudos existentes são bastante limitados no que diz respeito a demonstrar evidências empíricas que garantam quais são as técnicas de seleção de teste de regressão implementadas por ferramentas mais aplicáveis no desenvolvimento de \ac{APPS} Android. Neste sentido, é fundamental que novas pesquisas sejam desenvolvidas, de modo a ampliar o conjunto de evidências sobre essa aplicabilidade. 
+Embora a literatura tenha dedicado esforços à produzir evidências sobre a criação de novas técnicas de teste de regressão para Android, os estudos existentes são bastante limitados no que diz respeito a demonstrar evidências empíricas que garantam quais são as técnicas de seleção de teste de regressão implementadas por ferramentas mais aplicáveis no desenvolvimento de \ac{APPS} Android, e também, como estas técnicas são aplicadas por profissionais da indústria de \ac{APPS}. Neste sentido, é fundamental que novas pesquisas sejam desenvolvidas, de modo a ampliar o conjunto de evidências sobre essa aplicabilidade. 
 
 Dado a complexidade do problema ora descrito, este estudo buscará responder à seguinte questão de pesquisa principal:
 \leavevspace 
@@ -69,7 +68,7 @@ Esta questão foi refinada em questões específicas:
     
     \item \textbf{Existem ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para utilização (open source ou proprietárias) implementadas a partir de técnicas de seleção de teste de regressão?} Essa questão de pesquisa será respondida com a revisão estruturada da literatura sobre ferramentas de teste de regressão.
     
-    \item \textbf{Qual a perspectiva de acadêmicos e profissionais sobre técnicas de seleção de teste de regressão implementadas por ferramentas para projetos de \ac{APPS} Android?} Essa questão de pesquisa será respondida com a aplicação de um \textit{Survey} e de realização de Entrevistas com estudantes/profissionais que atuam em projetos de apps Android.
+    \item \textbf{Qual a perspectiva de acadêmicos e profissionais sobre a aplicação das técnicas de seleção de teste de regressão implementadas por ferramentas em projetos de \ac{APPS} Android?} Essa questão de pesquisa será respondida com a aplicação de um \textit{Survey} e de realização de Entrevistas com estudantes/profissionais que atuam em projetos de apps Android.
 
 \end{enumerate}
 
@@ -77,7 +76,7 @@ Esta questão foi refinada em questões específicas:
 
 \subsection{Objetivos}
 
-Compreendendo que o estudo das técnicas de seleção de teste de regressão para Android é um campo em expansão, o presente trabalho tem como objetivo \textbf{realizar uma avaliação empírica das técnicas de seleção de teste de regressão implementadas por ferramentas aplicadas a \ac{APPS} Android.}
+Compreendendo que o estudo das técnicas de seleção de teste de regressão para Android é um campo em expansão, o presente trabalho tem como objetivo \textbf{realizar uma avaliação empírica das técnicas de seleção de teste de regressão implementadas por ferramentas aplicadas a \ac{APPS} Android}.
 
 Os seguintes objetivos específicos foram definidos para esta investigação:
 
@@ -87,7 +86,7 @@ Os seguintes objetivos específicos foram definidos para esta investigação:
     
     \item \textbf{Verificar quais são as ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para uso (open source ou proprietárias), e se as mesmas foram implementadas baseadas nas técnicas de seleção de teste de regressão.} Para alcançar esse objetivo, será realizado uma revisão estruturada de literatura sobre ferramentas de teste de regressão.
     
-    \item \textbf{Identificar como é realizado o processo de teste de software por acadêmicos e profissionais que desenvolvem \ac{APPS} Android.} Para alcançar esse objetivo, será aplicado um \textit{Survey} e realizado entrevistas com acadêmicos e profissionais que trabalham com projetos de \ac{APPS} para Android.
+    \item \textbf{Identificar como é realizado o processo de teste de regressão por acadêmicos e profissionais que desenvolvem \ac{APPS} Android.} Para alcançar esse objetivo, será aplicado um \textit{Survey} e realizado entrevistas com acadêmicos e profissionais que trabalham com projetos de \ac{APPS} para Android.
 
 
 \end{enumerate}
