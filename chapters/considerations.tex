@@ -12,12 +12,16 @@ Nesta seção serão apresentados os trabalhos relacionados a este estudo. A lit
     
     \item \cite{Do2016RedroidAR}: Este trabalho apresenta um estudo de \textit{bugs} reais em \ac{APPS} Android que demonstra a existência de erros de regressão. Como solução para este problema, os pesquisadores propõem a técnica de seleção de teste de regressão denominada \textbf{REDROID} que aproveita a combinação de análise de impacto estático e cobertura dinâmica de código, para identificar um subconjunto de casos de teste para re-execução na versão modificada do aplicativo. A técnica foi implementada e testada através de um vasto estudo empírico.
     
-    \item \cite{7102609}
-    \item \cite{8094467}
+    \item \cite{8094467}: Neste estudo, os autores investigaram colaboradores de projetos Android de código aberto sobre práticas e preferências para projetar e gerar casos de teste, práticas de teste automatizadas e percepções de métricas de qualidade, como cobertura de código. Eles apresentaram os resultados de um estudo empírico, com 102 respostas, de aplicativos móveis de código aberto hospedados no GitHub, revelando as opiniões dos desenvolvedores sobre projetos de código aberto. Os resultados da pesquisa mostram a necessidade de ferramentas / abordagens para testar aplicativos com base em modelos. Segundo eles, a cobertura do código fonte não é uma medida importante da qualidade dos casos de teste. Esta pesquisa também mostra que, embora existam ferramentas, o uso delas para automatizar o processo de teste ainda é baixo.
+    
+    \item \cite{7102609}: Este trabalho apresenta um estudo empírico conduzido em duas etapas. Na primeira etapa, os autores analisaram o código fonte de teste de 600 projetos open source para compreender o estado atual dos testes de software na comunidade de desenvolvimento Android. Na segunda etapa, eles investigaram os desenvolvedores de aplicativos da Microsoft, obtendo 127 respostas. Eles apontaram a importância da atividade de teste de software, especificamente, com o crescimento da comunidade de aplicativos e a importância da atividade de teste para a criação de aplicativos de qualidade. Eles observaram que os desenvolvedores de aplicativos preferem usar estruturas de teste padrão, como JUnit, e também ferramentas de teste, como Monkeyrunner, Robotium e Robolectric. Além disso, muitos desenvolvedores do Android executam um processo de teste manual, sem a ajuda de qualquer estrutura ou ferramenta de teste.
+    
+    
+    \item \cite{ROY:2015}: Neste estudo, os autores realizaram uma comparação das principais ferramentas de geração de entradas de teste para Android, a fim de entender os pontos fortes e fracos dessas abordagens. Os entrevistados avaliaram a eficácia dessas ferramentas e técnicas de acordo com quatro métricas: facilidade de uso, capacidade de trabalhar em várias plataformas, cobertura de código e capacidade de detectar falhas. Seus resultados indicaram que a ferramenta Monkey obteve a melhor cobertura, em média, relatou o número mais significativo de falhas, foi a mais fácil de usar e funcionou para todas as plataformas. Além disso, os autores apresentaram um conjunto de recursos relevantes que a ferramenta de teste deve conter, como Gerar eventos do sistema, Minimizar reinicializações e Evitar efeitos colaterais entre diferentes execuções.
     
 \end{itemize}
     
-    Os trabalhos citados \cite{8377661} e \cite{Do2016RedroidAR} realizam um estudo sobre técnicas de seleção de teste de regressão para \ac{APPS} Android, e propõem como solução a criação de uma nova técnica, bem como sua implementação, e realizam estudos para prover evidências empíricas sobre sua eficácia. \textcolor{blue}{O presente trabalho tem como diferencial coletar evidências empíricas sobre a eficiência das técnicas de teste de regressão implementadas por ferramentas para \ac{APPS} Android evidenciadas na literatura e as utilizadas pela indústria, com a realização de um estudo experimental destas técnicas propostas em um conjunto \ac{APPS} Android escritos em Java. Ainda, propomos identificar a oportunidade de implementação de novas ferramentas.}
+    Os trabalhos citados \cite{8377661} e \cite{Do2016RedroidAR} realizam um estudo sobre técnicas de seleção de teste de regressão para \ac{APPS} Android, e propõem como solução a criação de uma nova técnica, bem como sua implementação, e realizam estudos para prover evidências empíricas sobre sua eficácia. Os trabalhos de \cite{8094467}, \cite{7102609} e \cite{ROY:2015} investigaram o perfil dos profissionais que trabalham no desenvolvimento de aplicativos Android.  O presente trabalho tem como diferencial coletar evidências empíricas sobre a quais técnicas de teste de regressão implementadas por ferramentas para \ac{APPS} Android evidenciadas na literatura e as utilizadas pela indústria, são mais adequadas em projetos de apps para Android. Ainda, propomos identificar a oportunidade de implementação de novas ferramentas.
 
 
 \section{Cronograma de Atividades}
@@ -45,20 +49,20 @@ A Tabela \ref{tabela_cronograma} apresenta o cronograma das atividades definidas
     \footnotesize
     \def \arraystretch{1.0}
     \caption{Cronograma de Atividades}
-    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|c|}
         \hline
-        \multirow{2}{*}{\bf Atividades} &  \multicolumn{6}{c|}{\bf 2020} \\ \cline{2-9} 
-        & \bf 4 & \bf 5 & \bf 6 & \bf 7 & \bf 8 & \bf 9 \\  
+        \multirow{2}{*}{\bf Atividades} &  \multicolumn{5}{c|}{\bf 2020} \\ \cline{2-6} 
+        & \bf 8 & \bf 9 & \bf 10 & \bf 11 & \bf 12\\  
         \hline
-        \bf AT1 & $\bullet$ & $\bullet$ &  &  &  & \\
+        \bf AT1 & $\bullet$ & $\bullet$ &  &  & \\
         \hline
-        \bf AT2 &  &  & $\bullet$ & $\bullet$ & $\bullet$ & \\
+        \bf AT2 &  & $\bullet$ & $\bullet$ & & \\
         \hline
-        \bf AT3 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+        \bf AT3 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
         \hline
-        \bf AT4 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+        \bf AT4 & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$\\
         \hline
-        \bf AT5 &  &  &  &  &  & $\bullet$ \\
+        \bf AT5 &  &  &  &  & $\bullet$ \\
         \hline
     \end{tabular}
     \label{tabela_cronograma}
