@@ -1,7 +1,7 @@
 \xchapter{\textit{Survey}}{}
 \acresetall 
 
-Após apresentar as técnicas de seleção de testes de regressão encontradas na literatura, e as ferramentas disponíveis para testes de \ac{APPS} Android, essas informações serão usadas neste \textit{survey} com o objetivo de compreender como testadores e desenvolvedores, realizam o teste de regressão em projetos de apps para Android, como forma de responder a QP3 da presente investigação. Neste capítulo encontram-se detalhes sobre o planejamento, execução e resultados obtidos.
+Com o objetivo de compreender como testadores e desenvolvedores, realizam o teste de regressão, e como forma de responder a QP3 da presente investigação, aplicamos um \textit{Survey}, que foi respondido por 100 profissionais e pesquisadores que atuam em projetos de apps para Android. Neste capítulo encontram-se detalhes sobre o planejamento, execução e resultados obtidos.
 Os resultados obtidos com a aplicação deste \textit{Survey} foram reportados em um artigo submetido e aceito pelo SBES 2020 - Trilha de Ideias Inovadoras e Resultados Emergentes.
 
 
@@ -30,13 +30,19 @@ Esta seção abrange os detalhes do planejamento, procedimentos de execução e 
 
 \subsection{Identificação do Público Alvo}
 
-Para obter resultados válidos, selecionamos como público-alvo estudantes e profissionais de diferentes estados do Brasil que trabalham com testes de aplicativos Android. Foram considerados três critérios:
+Para obter resultados válidos, selecionamos como público-alvo estudantes e profissionais de diferentes estados do Brasil que trabalham com testes de aplicativos para Android. 
+
+
+\begin{comment}
+Foram considerados três critérios:
 
 \begin{enumerate}
     \item Pessoas que trabalham de forma autônoma; 
     \item Pessoas que trabalham / pesquisam em uma empresa; 
     \item Alunos pesquisando tópicos relacionados.
 \end{enumerate}
+
+\end{comment}
 
 \subsection{Design do Questionário}
 
@@ -73,7 +79,8 @@ O \textit{feedback} sugeriu pequenas modificações na estrutura do questionári
 
 \subsection{Distribuição do Questionário}
 
-Para criar o questionário, usamos a ferramenta online Formulários Google\footnote{\url{http://docs.google.com/forms}}. O processo de ampla divulgação desta pesquisa foi realizado em 20 de janeiro de 2020 e ficou disponível por 41 dias. O link do questionário foi enviado por e-mails individuais, listas de e-mail e mídias sociais. O questionário também foi enviado por e-mail para empresas que trabalham com o desenvolvimento de aplicativos Android. O formulário foi enviado juntamente com um texto de convite, com informações essenciais sobre o objetivo do estudo e a importância do estudo. Os participantes também foram informados sobre as políticas de privacidade do estudo de maneira clara e detalhada.
+Para criar o questionário, usamos a ferramenta online Formulários Google\footnote{\url{http://docs.google.com/forms}}. O processo de ampla divulgação desta pesquisa foi realizado em 20 de janeiro de 2020 e ficou disponível por aproximadamente dois meses no primeiro semestre de 2020. O link do questionário foi enviado por e-mails (individuais e listas de e-mail) e mídias sociais, como o Linkedln. %O questionário também foi enviado por e-mail para empresas que trabalham com o desenvolvimento de aplicativos Android.%
+O formulário foi enviado juntamente com um texto de convite, com informações essenciais sobre o objetivo do estudo e a importância do estudo. Os participantes também foram informados sobre as políticas de privacidade do estudo de maneira clara e detalhada.
 
 
 \section{Resultados}\label{resultssurvey}
@@ -133,7 +140,7 @@ Os entrevistados foram perguntados se eles costumavam executar testes de forma m
  
 Em outra questão sobre o uso de ferramentas, 35\% dos entrevistados informaram que não usam ferramentas para testar seus aplicativos. No entanto, essa resposta contrasta com a anterior, quando 30\% afirmaram que só realizam testes manualmente. Em relação às ferramentas usadas com frequência, as mais relatadas foram Appium, Espresso, UI Automator, Roboeletric e Monkey. Todas essas ferramentas são gratuitas.
  
-Também perguntamos aos entrevistados se eles usam ferramentas para realizar testes de regressão. 69\% deles não usam nenhuma ferramenta específica. 11\% dos entrevistados afirmaram não testar aplicativos após a manutenção e 29\% usam nenhuma ferramenta após a manutenção ou atualização, da seguinte forma: 13\% usam as mesmas ferramentas adotadas para testes regulares para realizar testes de regressão; 12\% usam ferramentas específicas de teste de regressão, conforme indicado na literatura; e 4\% usam outras ferramentas, como TestNG e ferramentas internas, ou seja, aquelas desenvolvidas por sua própria empresa.
+Também perguntamos aos entrevistados se eles usam ferramentas para realizar testes de regressão. 67\% deles não usam nenhuma ferramenta específica. 11\% dos entrevistados afirmaram não testar aplicativos após a manutenção e 29\% usam nenhuma ferramenta após a manutenção ou atualização, da seguinte forma: 13\% usam as mesmas ferramentas adotadas para testes regulares para realizar testes de regressão; 12\% usam ferramentas específicas de teste de regressão, conforme indicado na literatura; e 4\% usam outras ferramentas, como TestNG e ferramentas internas, ou seja, aquelas desenvolvidas por sua própria empresa.
 
 Perguntamos aos participantes como eles poderiam avaliar a relevância do suporte de ferramentas existente para testes de regressão, no sentido de que eles poderiam indicar se as ferramentas poderiam atender às suas necessidades específicas ou não.
 
@@ -188,29 +195,25 @@ Tais respostas apresentam dificuldades encontradas pelos participantes no uso de
     
 \item \textbf{Processo de teste de regressão:} 
 
-Embora 99\% dos participantes considerem relevante para realizar testes de regressão, a quantidade de profissionais que realmente os realiza é muito menor. A seleção dos testes mais adequados pode reduzir o custo do software e o esforço da equipe. Além disso, a pesquisa não incluiu a palavra regressão em nenhuma pergunta ou resposta. Assim, alguns dos entrevistados podem não ter entendido que testar o aplicativo após executar sua atualização (manutenção) se refere a testes de regressão \cite{65194}. Observamos divergências nas respostas dos entrevistados. Por exemplo, quando perguntados se eles realizam algum tipo de teste após a manutenção do aplicativo (atualização) para garantir que as alterações não afetem o comportamento funcional do aplicativo, 4\% responderam que nunca realizam esses testes. No entanto, em uma pergunta relacionada, 12\% responderam que não testam o aplicativo após a manutenção.
+Embora 99\% dos participantes considerem relevante para realizar testes de regressão, a quantidade de profissionais que realmente os realiza é muito menor. A seleção dos testes mais adequados pode reduzir o custo do software e o esforço da equipe. Além disso, a pesquisa não incluiu a palavra regressão em nenhuma pergunta ou resposta. Assim, alguns dos entrevistados podem não ter entendido que testar o aplicativo após executar sua atualização (manutenção) se refere a testes de regressão \cite{LEUNG1989}. Observamos divergências nas respostas dos entrevistados. Por exemplo, quando perguntados se eles realizam algum tipo de teste após a manutenção do aplicativo (atualização) para garantir que as alterações não afetem o comportamento funcional do aplicativo, 4\% responderam que nunca realizam esses testes. No entanto, em uma pergunta relacionada, 12\% responderam que não testam o aplicativo após a manutenção.
  
-Embora a literatura apresente muitos estudos sobre técnicas de seleção de casos de teste como uma maneira de reduzir a quantidade de casos de teste no processo de teste de regressão \cite{ENGSTROM201014, KAZMI2017, 65194, WHITE1991, 536955}, muitos profissionais ainda reexecutam todos os casos de teste como na última versão. Como a maioria dos entrevistados não usa o suporte de ferramentas, o custo e o esforço para aplicar uma estratégia de seleção manualmente podem ser maiores do que reexecutar o conjunto completo de testes. Estes resultados reforçam a necessidade de ferramentas que forneçam uma seleção adequada de casos de teste. Estudos futuros são necessários para confirmar esses resultados preliminares.
+Embora a literatura apresente muitos estudos sobre técnicas de seleção de casos de teste como uma maneira de reduzir a quantidade de casos de teste no processo de teste de regressão \cite{KAZMI2017,ENGSTROM201014, 536955, WHITE1991,LEUNG1989}, muitos profissionais ainda reexecutam todos os casos de teste como na última versão. Como a maioria dos entrevistados não usa o suporte de ferramentas, o custo e o esforço para aplicar uma estratégia de seleção manualmente podem ser maiores do que reexecutar o conjunto completo de testes. Estes resultados reforçam a necessidade de ferramentas que forneçam uma seleção adequada de casos de teste. Estudos futuros são necessários para confirmar esses resultados preliminares.
 
 \end{itemize}
 
 
-\begin{comment}
 \section{Ameaças à Validade}\label{threatstovalidity}
 
+\textbf{Validade interna:} A pesquisa foi desenhada por um pesquisador e revisada por três pesquisadores. Posteriormente, um projeto piloto foi aplicado para validação. Além disso, as respostas dos respondentes foram dadas em português e o relato foi feito em inglês. Para mitigar essa ameaça, realizamos a tradução em pares, buscando manter a confiabilidade dos dados coletados.
 
-\textbf{Validade externa:} embora nosso estudo relate resultados com base em uma amostra que considerou pesquisadores e profissionais de teste de software, os resultados podem não ser generalizados para outros cenários. No entanto, este estudo pode ser considerado como um passo inicial para fornecer mais evidências sobre a conscientização e a percepção dos profissionais sobre o uso do teste de regressão na manutenção de aplicativos Android. Fornecemos os procedimentos e os dados de pesquisa para permitir mais replicações.
+\textbf{Validade externa:} Embora este estudo seja baseado em uma amostra que considerou pesquisadores e profissionais de teste de software, os resultados não podem ser generalizados para outros cenários. No entanto, este estudo é um passo inicial para fornecer mais evidências sobre a consciência e percepção dos profissionais sobre o uso de teste de regressão na manutenção de aplicativos Android. 
 
-\textbf{Validade de construção:} no questionário, evitamos usar o termo testes de regressão. Em vez disso, usamos implicitamente a definição do teste de regressão, como uma estratégia para evitar vieses e impedir que os participantes pesquisem o conceito, antes de responder ao questionário. No entanto, alguns participantes podem não ter relacionado esse conceito aos testes de regressão.
-
-\textbf{Validade de conclusão:} Neste estudo, não realizamos nenhuma análise quantitativa, pois a amostra não era grande o suficiente. Em vez disso, realizamos uma análise qualitativa, \textit{insights} sobre os pontos importantes a serem considerados, principalmente para futuras investigações.
-\end{comment}
-
+\textbf{Validade de construção:} No questionário,  evitamos usar o termo teste de regressão. Em vez disso, usamos implicitamente a definição do teste de regressão como uma estratégia para evitar viés e impedir que os participantes pesquisassem o conceito, antes de responder ao questionário. Apesar dos esforços, alguns participantes podem não ter relacionado a definição ao teste de regressão.
 
 
 \section{Síntese do capítulo}
 
-O presente capítulo apresentou o \textit{Survey} utilizado como instrumento de pesquisa para compreender qual a perspectiva de acadêmicos e profissionais sobre técnicas de seleção de teste de regressão implementadas por ferramentas para projetos de \ac{APPS} Android. Na Seção \ref{rqsurvey} definimos as questões de pesquisa. Na Seção \ref{rmsurvey} apresentamos a metodologia utilizada. A Seção \ref{resultssurvey} apresenta os resultados obtidos, e na Seção \ref{discussions} as devidas discussões.
+O presente capítulo apresentou o \textit{Survey} utilizado como instrumento de pesquisa para compreender qual a perspectiva de acadêmicos e profissionais sobre técnicas de seleção de teste de regressão implementadas por ferramentas para projetos de \ac{APPS} Android. Na Seção \ref{rqsurvey} definimos as questões de pesquisa. Na Seção \ref{rmsurvey} apresentamos a metodologia utilizada. A Seção \ref{resultssurvey} apresenta os resultados obtidos. Na Seção \ref{discussions} as devidas discussões, e na seção \ref{threatstovalidity} as ameaças à validade.
 
 
 
