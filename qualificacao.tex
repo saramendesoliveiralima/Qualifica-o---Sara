@@ -39,18 +39,31 @@
 \coadviser{Dra. Larissa Rocha Soares}
 
 \begin{document}
+\renewcommand{\bibname}{Referências}
 \pgcompfrontpage
+
+% Parte pre-textual
 \frontmatter
-
 \pgcomppresentationpage
-
 \include{preambulo/abstract}
 
 \tableofcontents
-\listoffigures
-\listoftables
 
-\include{preambulo/siglas}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+
+\input{preambulo/siglas.tex}
+
+%\listoffigures
+%\listoftables
+%\include{preambulo/siglas}
 
 \mainmatter
 
