@@ -4,15 +4,15 @@
 Este capítulo apresenta o contexto em que a presente investigação se insere, enfatizando: a apresentação; o problema; os objetivos; as questões de pesquisa; a metodologia; os resultados esperados e como o trabalho está estruturado.
 
 \section{Apresentação}\label{sec:apresentacao}
-Desenvolver software não é uma tarefa simples e envolve diversos fatores, tais como: escopo, prazo e recursos disponíveis. Nesse processo, um problema que pode ocorrer é entregar algo diferente do que era esperado pelo cliente. Na maioria das vezes isso acontece porque as atividades de desenvolvimento dependem da capacidade de interpretação e execução das pessoas que as constroem. Para que esses erros não perdurem e para que se possa identificá-los antes da implantação do software, existe uma série de atividades, coletivamente chamadas de Validação, Verificação e Teste \cite{DELAMARO2007}. 
+Desenvolver software não é uma tarefa simples e envolve diversos fatores, tais como: escopo, prazo e recursos disponíveis. Nesse processo, um problema que pode ocorrer é entregar algo diferente do que era esperado pelo cliente. Na maioria das vezes isso acontece porque as atividades de desenvolvimento dependem da capacidade de interpretação e execução das pessoas que as constroem. Para que esses erros não perdurem e para que se possa identificá-los antes da implantação do software, existe uma série de atividades, coletivamente chamadas de Verificação, Validação e Teste \cite{DELAMARO2007}. 
 
-\ac{VV} permite que se determine sistematicamente se os requisitos de um sistema estão sendo corretamente tratados e implementados. Por sua vez, a atividade de testes tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos. Verificar, validar e testar software auxiliam na Garantia de Qualidade do mesmo. Garantia de Qualidade, do termo comumente utilizado (em inglês) \ac{QA}, é o processo geral de definição de como a qualidade de software pode ser alcançada e como as empresas que trabalham com desenvolvimento sabem que o software alcançou o nível desejado. \ac{QA} estabelece processos, procedimentos e padrões que conduzem a um software de qualidade \cite{HIRAMA2011}. 
+O processo de \ac{VV} permite que se determine sistematicamente se os requisitos de um sistema estão sendo corretamente tratados e implementados. Por sua vez, a atividade de testes tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos. Verificar, validar e testar software auxiliam o processo de garantia da qualidade. Garantia da Qualidade, do termo comumente utilizado (em inglês) \ac{QA}, é o processo geral de definição de como a qualidade de software pode ser alcançada e como as empresas que trabalham com desenvolvimento sabem que o software alcançou o nível desejado. \ac{QA} estabelece processos, procedimentos e padrões que conduzem a um software de qualidade \cite{HIRAMA2011}. 
 
 O presente trabalho tem como foco a atividade de teste. Os testes são normalmente executados e reportados durante as etapas de desenvolvimento do software. Existem algumas categorias (tipos) de teste de software, tais como: teste de unidade, teste de integração, teste de validação e teste de sistema. Espera-se que uma grande massa de testes seja executada antes de se disponibilizar uma versão estável do software. Entretanto, existe uma categoria de testes, denominada \textbf{teste de regressão}, que deve ser considerada quando é necessário realizar a manutenção do software, quer perfectiva, corretiva, adaptativa ou preventiva \cite{DBLP:series/springer/Mens08}. O teste de regressão tem como objetivo fornecer confiança de que as alterações recém-introduzidas não compromete o comportamento funcional da parte existente e inalterada do software \cite{Yoo:2012:RTM:2284811.2284813}.
 
-No teste de regressão, uma das possíveis abordagens é a reexecução de todos os casos de testes da versão original do software. Porém, esse procedimento tende a gerar um grande esforço da equipe de testes, a depender da quantidade de casos de teste. A literatura apresenta uma série de técnicas para lidar com este problema, em particular no sentido de propor mecanismos para reduzir o número de reexecuções de casos de testes, sem perder a cobertura do código fonte e a capacidade de detecção de defeitos  \cite{Graves:2001:ESR:367008.367020,ENGSTROM201014,KAZMI2017,ROMANO201862}.
+No teste de regressão, uma das possíveis abordagens é a reexecução de todos os casos de teste da versão original do software. Porém, esse procedimento tende a gerar um grande esforço da equipe de testes, a depender da quantidade de casos de teste. A literatura apresenta uma série de técnicas para lidar com este problema, em particular no sentido de propor mecanismos para reduzir o número de reexecuções de casos de teste, sem perder a cobertura do código fonte e a capacidade de detecção de defeitos  \cite{Graves:2001:ESR:367008.367020,ENGSTROM201014,KAZMI2017,ROMANO201862}.
 
-Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de Teste de Regressão são classificadas como: técnicas de seleção; técnicas de minimização; e técnicas de priorização. As técnicas de seleção, buscam reduzir a quantidade de casos de testes a serem reexecutados selecionando-os de acordo com a parte do software que foi alterada. As técnicas de minimização, propõe a remoção de casos de testes redundantes. E, as técnicas de priorização tem como foco encontrar o conjunto mais representativo de casos de testes a serem reexecutados.
+Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de Teste de Regressão são classificadas como: técnicas de seleção, técnicas de minimização, e técnicas de priorização. As técnicas de seleção, buscam reduzir a quantidade de casos de teste a serem reexecutados selecionando-os de acordo com a parte do software que foi alterada. As técnicas de minimização propõem a remoção de casos de teste redundantes. Por sua vez, as técnicas de priorização tem como objetivo encontrar o conjunto mais representativo de casos de teste a serem reexecutados.
 
 Dentre os domínios de aplicação emergentes, testes de regressão apresentam-se como uma estratégia viável para lidar com a complexidade - e a constante evolução - dos \ac{APPS}, tais como: experiência do usuário, portabilidade, segurança, conectividade e desempenho. Neste cenário, o presente trabalho tem como foco a análise da evolução das técnicas de seleção de teste de regressão no desenvolvimento de \ac{APPS} para Android.
 
@@ -27,12 +27,12 @@ Os dispositivos móveis tem sido cada vez mais utilizados no cotidiano. Pesquisa
 \label{figure:usuariosAndroid}
 \end{figure}
 
-Segundo \citeonline{Do2016RedroidAR}, a plataforma móvel se diferencia de uma variedade de áreas de aplicativos de Desktop, tais como entretenimento, comércio eletrônico e mídia social. Assim, os desenvolvedores são obrigados a produzir \ac{APPS} de alta qualidade, em particular no que diz respeito a requisitos não-funcionais como portabilidade, confiabilidade e segurança.
+Segundo \citeonline{Do2016RedroidAR}, a plataforma móvel se diferencia de uma variedade de áreas de aplicativos de Desktop, tais como entretenimento, comércio eletrônico e mídia social. Assim, os desenvolvedores são desafiados a entregar \ac{APPS} de alta qualidade, em particular no que diz respeito a requisitos não-funcionais, tais como portabilidade, confiabilidade e segurança, dentre outros.
 
-Nos últimos anos, uma grande quantidade de pesquisas tem sido realizadas para prover uma maior confiabilidade dos \ac{APPS}, por exemplo, aplicando testes automatizados \cite{7927972, 8424973, 8453877}. No entanto, a maioria das pesquisas está focada no teste de uma versão única de aplicativos móveis \cite{Do2016RedroidAR}. Em virtude da constante evolução dos aplicativos e a necessidade de avaliar se as alterações realizadas não afetaram seu comportamento funcional, os testes de regressão se apresentam como uma estratégia viável \cite{8377661} na detecção de defeitos.   
-%Como os \ac{APPS} evoluem com frequência, é importante que os desenvolvedores façam uso de técnicas de teste de regressão, dado seu potencial em identificar problemas no código decorrentes de mudanças no software \cite{8377661}.%
+Nos últimos anos, uma grande quantidade de pesquisas tem sido realizada para prover uma maior confiabilidade dos \ac{APPS}, por exemplo, aplicando testes automatizados \cite{7927972, 8424973, 8453877}. No entanto, a maioria das pesquisas está focada no teste de uma versão única de aplicativos móveis \cite{Do2016RedroidAR}. Em virtude da constante evolução dos aplicativos e a necessidade de avaliar se as alterações realizadas não afetam seu comportamento, os testes de regressão se apresentam como uma estratégia viável \cite{8377661} na detecção de defeitos.   
 
-Ao tratar de técnicas de teste de regressão, a literatura apresenta diversos trabalhos que fazem uso de técnicas tradicionais, i.e., concebidas para testar sistemas Desktop \cite{536955}, \cite{ENGSTROM201014}. Entretanto, embora muitas abordagens eficientes e eficazes tenham sido propostas, há pouca evidência sobre a aplicação direta dessas técnicas para o teste de \ac{APPS}, tais como:   \cite{Choi:2018:DMA:3180155.3180173}, \cite{8377661}, \cite{Do2016RedroidAR}, \cite{5954416}, \cite{7927972}, \cite{8424973}, \cite{6339502}, \cite{6569773}, \cite{7427895}, \cite{7832883}, \cite{7833000}. Alguns desses estudos tratam de experimentos que apresentam evidências empíricas acerca da eficiência/eficácia da ferramenta proposta neste cenário.
+
+Ao tratar de técnicas de teste de regressão a literatura apresenta diversos trabalhos que fazem uso de técnicas tradicionais, i.e., concebidas para testar sistemas Desktop \cite{536955}, \cite{ENGSTROM201014}. Nos últimos anos, a literatura tem realizado estudos sobre a aplicação dessas técnicas para o teste de \ac{APPS}, tais como: \cite{5954416}, \cite{6339502}, \cite{6569773}, \cite{Do2016RedroidAR},  \cite{7427895}, \cite{7832883}, \cite{7833000},  \cite{7927972}, \cite{Choi:2018:DMA:3180155.3180173}, \cite{8377661}, \cite{8424973}. Alguns desses estudos tratam de experimentos que apresentam evidências empíricas acerca da eficiência/eficácia da ferramenta desenvolvida.
 
 
 \begin{comment}
@@ -40,12 +40,12 @@ Um importante fator que causa a incompatibilidade é a diferença entre a arquit
 Segundo \citeonline{5954416}, a qualidade dos \ac{APPS} é geralmente ruim. Um dos fatores da falta de qualidade são processos de desenvolvimento muito rápidos em que a atividade de teste é negligenciada ou conduzida de forma superficial, uma vez que é considerada demasiado complexa, difícil de automatizar, dispendiosa e demorada.
 Em virtude do crescimento do mercado de dispositivos móveis e da necessidade de produzir \ac{APPS} com qualidade, pesquisas recentes tem apresentado o desenvolvimento de técnicas implementadas por ferramentas de teste de regressão voltadas para aplicações em Android \cite{Choi:2018:DMA:3180155.3180173}, \cite{8377661}, \cite{Do2016RedroidAR}, \cite{5954416}, \cite{7927972}, \cite{8424973}, \cite{6339502}, \cite{6569773}, \cite{7427895}, \cite{7832883}, \cite{7833000}. Alguns desses estudos tratam de experimentos que apresentam evidências empíricas acerca da eficiência/eficácia da ferramenta proposta neste cenário.
 Alguns desses estudos tratam de experimentos com comprovação empírica para comprovar a eficiência/eficácia da ferramenta proposta neste cenário.
-Embora a literatura tenha dedicado esforços em produzir evidências sobre a criação de novas técnicas de teste de regressão para Android, os estudos existentes são bastante limitados no que diz respeito a demonstrar evidências empíricas que garantam quais são as técnicas de seleção de teste de regressão implementadas por ferramentas mais aplicáveis no desenvolvimento de \ac{APPS} Android, e também, como estas técnicas são aplicadas por profissionais da indústria de \ac{APPS}. Neste sentido, é fundamental que novas pesquisas sejam desenvolvidas, de modo a ampliar o conjunto de evidências sobre essa aplicabilidade.
+Embora a literatura tenha dedicado esforços em produzir evidências sobre a criação de novas técnicas de teste de regressão para Android, os estudos são limitados no que diz respeito a demonstrar evidências empíricas que garantam quais são as técnicas de seleção de teste de regressão implementadas por ferramentas mais aplicáveis no desenvolvimento de \ac{APPS} Android, e também, como estas técnicas são aplicadas por profissionais da indústria de \ac{APPS}. Neste sentido, é fundamental que novas pesquisas sejam desenvolvidas, de modo a ampliar o conjunto de evidências sobre essa aplicabilidade.
 \end{comment}
 
 Embora a literatura tenha dedicado esforços na apresentação de evidências empíricas acerca das técnicas de teste de regressão aplicadas a projetos Android, os estudos existentes são bastante limitados no que diz respeito a prover evidências empíricas sobre quais são as técnicas de seleção de teste de regressão implementadas por ferramentas mais aplicáveis no desenvolvimento de \ac{APPS} Android \cite{8377661,Do2016RedroidAR}, e também, como estas técnicas são utilizadas por profissionais da indústria de \ac{APPS} \cite{8094467, 7102609, ROY:2015}. Neste sentido, é fundamental que novas pesquisas sejam desenvolvidas, de modo a ampliar o conjunto de evidências sobre essa aplicabilidade.
 
-Dado a complexidade do problema ora descrito, este estudo busca responder à seguinte questão de pesquisa principal:
+Visto que as técnicas de seleção utilizam como critério de redução dos casos de teste a análise da parte que foi alterada entre as versões de um software; que os apps para Android passam por constantes manutenções, e dado a complexidade do problema ora descrito, este estudo busca responder à seguinte questão de pesquisa principal:
 %\leavevspace 
 \begin{center}
     \noindent\fbox{ 
@@ -65,12 +65,12 @@ Esta questão foi refinada em questões específicas:
 \begin{enumerate}[label=\bf QP\arabic*,leftmargin=1.8cm]
 
 \item \textbf{Quais são as técnicas de seleção de teste de regressão apresentadas na literatura?} Essa questão de pesquisa tem como objetivo levantar quais são as técnicas de seleção de teste de regressão disponíveis na literatura, e quais destas, se aplicam ao desenvolvimento de \ac{APPS} para Android.
-%Essa questão de pesquisa será respondida com a revisão estruturada da literatura sobre Técnicas de Seleção de Teste de Regressão.%
+
     
-\item \textbf{Existem ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para utilização (open source ou proprietárias) implementadas a partir de técnicas de seleção de teste de regressão?} Essa questão de pesquisa tem como objetivo identificar se existem ferramentas implementadas a partir do estudo das técnicas de seleção de teste de regressão que estejam disponíveis para utilização por profissionais/pesquisadores da área.
-%Essa questão de pesquisa será respondida com a revisão estruturada da literatura sobre ferramentas de teste de regressão.%
-\item \textbf{Qual a aplicabilidade das técnicas de seleção de teste de regressão na indústria de \ac{APPS} para Android?} Essa questão de pesquisa tem como objetivo identificar se as técnicas de seleção de teste de regressão encontradas na literatura são utilizadas por profissionais/pesquisadores que atuam em projetos de \ac{APPS} para Android.
-%{Qual a perspectiva de acadêmicos e profissionais sobre a aplicação das técnicas de seleção de teste de regressão implementadas por ferramentas em projetos de \ac{APPS} Android?}Essa questão de pesquisa será respondida com a aplicação de um \textit{Survey} e de realização de Entrevistas com estudantes/profissionais que atuam em projetos de apps Android.%
+\item \textbf{Existem ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para utilização (open source ou proprietárias) implementadas a partir de técnicas de seleção de teste de regressão?} Essa questão de pesquisa tem como objetivo identificar se existem ferramentas implementadas a partir do estudo das técnicas de seleção de teste de regressão que estejam disponíveis para utilização por profissionais da área.
+
+\item \textbf{Qual a aplicabilidade das técnicas de seleção de teste de regressão na indústria de \ac{APPS} para Android?} Essa questão de pesquisa tem como objetivo identificar se as técnicas de seleção de teste de regressão encontradas na literatura são utilizadas por profissionais que atuam em projetos de \ac{APPS} para Android.
+
 
 \end{enumerate}
 
@@ -86,7 +86,7 @@ Os seguintes objetivos específicos foram definidos para esta investigação:
     
     \item \textbf{Verificar quais são as ferramentas de teste de regressão aplicadas a \ac{APPS} Android disponíveis para uso (open source ou proprietárias), e se as mesmas foram implementadas baseadas nas técnicas de seleção de teste de regressão.} Para alcançar esse objetivo, será realizado uma revisão estruturada de literatura sobre ferramentas de teste de regressão.
     
-    \item \textbf{Identificar como é realizado o processo de teste de regressão por profissionais/pesquisadores que atuam em projetos de desenvolvimento de \ac{APPS} para Android.} Para alcançar esse objetivo, será aplicado um \textit{Survey} e realizado entrevistas com profissionais/pesquisadores que trabalham com projetos de \ac{APPS} para Android.
+    \item \textbf{Identificar como é realizado o processo de teste de regressão por profissionais que atuam em projetos de desenvolvimento de \ac{APPS} para Android.} Para alcançar esse objetivo, será aplicado um \textit{Survey} e realizado entrevistas com profissionais/pesquisadores que trabalham com projetos de \ac{APPS} para Android.
 
 \end{enumerate}
 
@@ -95,34 +95,31 @@ Os seguintes objetivos específicos foram definidos para esta investigação:
 Esta Seção apresenta a metodologia utilizada para desenvolver este trabalho e alcançar os objetivos propostos:
 
 \begin{itemize}
-  \item \textbf{Fase 1}: Etapa conceitual que tem como objetivo tratar dos conhecimentos referentes ao tema proposto.
+  \item \textbf{Fase 1: Etapa conceitual que tem como objetivo tratar dos conhecimentos referentes ao tema proposto.}
   
-  Esta etapa elencou a bibliografia das áreas sob investigação, para compreender conceitos fundamentais. São elas: evolução de software; qualidade de software; testes de software; teste de regressão; técnicas de seleção; estratégias de testes de aplicações para dispositivos móveis; ferramentas para teste de \ac{APPS} Android.
+  Esta etapa busca levantar a bibliografia das áreas sob investigação, para compreender conceitos fundamentais. São elas: evolução de software; qualidade de software; testes de software; teste de regressão; técnicas de seleção; estratégias de testes de aplicações para dispositivos móveis; ferramentas para teste de \ac{APPS} Android.
   
-  O levantamento bibliográfico foi feito de forma estruturada, com a leitura de livros e artigos sobre os tópicos abordados na pesquisa. Inicialmente uma leitura mais ampla em busca de um conhecimento inicial, e em uma segunda fase, com leituras específicas de textos com relação direta a este trabalho, utilizando a metodologia de mapeamento sistemático proposto por \citeonline{Wohlin:2012:ESE:2349018}.
+  O levantamento bibliográfico foi feito de forma sistemática, com a leitura de livros e artigos sobre os tópicos abordados na pesquisa. Inicialmente uma leitura mais ampla em busca de um conhecimento inicial, e em uma segunda fase, com leituras específicas de textos com relação direta a este trabalho, utilizando a metodologia de mapeamento sistemático proposto por \citeonline{Wohlin:2012:ESE:2349018}.
   
-  \item \textbf{Fase 2}: Survey.
+  \item \textbf{Fase 2: \textit{Survey}.}
   
-  Esta etapa contempla a aplicação de um \textit{Survey} para profissionais/pesquisadores que trabalham em projetos de \ac{APPS} para Android.
+  Esta etapa contempla a aplicação de um \textit{Survey} a profissionais que trabalham em projetos de \ac{APPS} para Android.
   
-  Com o objetivo de compreender como testadores e desenvolvedores, realizam o teste de regressão em projetos de apps para Android, utilizando a metodologia proposta por Kasunic \citeonline{Kasunic2005DesigningAE} e aplicando os princípios de pesquisa definidos por Kitchenham et al. \citeonline{Kitchenham:2002:PSR:566493.566495}, realizamos um \textit{Survey} com 100 profissionais/pesquisadores que atuam em projetos de \ac{APPS} para Android. 
-  
-  Os resultados preliminares demostraram que o processo de teste de \ac{APPS} para Android é feito majoritariamente de forma manual e sem suporte de ferramentas, bem como, identificamos que apenas 51\% dos respondentes realizam teste de regressão.
+  O \textit{Survey} tem como objetivo compreender como testadores e desenvolvedores realizam o teste de regressão em projetos de apps para Android. A pesquisa se baseia no método proposto por \citeonline{Kasunic2005DesigningAE} e aplica os princípios de pesquisa definidos por \citeonline{Kitchenham:2002:PSR:566493.566495}.
  
-  \item \textbf{Fase 3:} Entrevistas.
+  \item \textbf{Fase 3: Entrevistas.}
   
-  %Esta etapa refere-se a realização de entrevistas com uma amostra de profissionais que trabalham no processo de testes de \ac{APPS} Android e possuem experiência na área, para compreender questões específicas referente a este processo.%
-  Esta etapa refere-se a realização de entrevistas com profissionais que trabalham em projetos de \ac{APPS} para Android e possuem experiência na área de testes de \ac{APPS}. Queremos complementar os resultados obtidos com o \textit{Survey}, explorando lacunas não abordadas na etapa anterior, tais como, identificar quais \textit{features} das ferramentas de teste para \ac{APPS} Android atendem os profissionais/pesquisadores da área, e quais features precisam ser implementadas. Bem como, compreender como o teste de regressão é executado. Utilizaremos o design de entrevistas semi-estruturadas elencado em \citeonline{HOVE:2005}.
+  Esta etapa refere-se a realização de entrevistas com profissionais que trabalham em projetos de \ac{APPS} para Android e possuem experiência na área. O estudo visa complementar os resultados obtidos com o \textit{Survey}, explorando lacunas ainda inexploradas na etapa anterior, tais como identificar quais \textit{features} das ferramentas de teste para \ac{APPS} Android atendem aos profissionais, e quais \textit{features} precisam ser implementadas. Além disso, o estudo busca compreender como o teste de regressão é executado. O método definido em \citeonline{HOVE:2005} será empregado neste estudo.
   
-  \item \textbf{Fase 4}:\textit{Evidences Briefings}
+  \item \textbf{Fase 4: \textit{Evidences Briefings}.}
   
-  Esta etapa refere-se na confecção de \textit{Evidences Briefings} para reportar a pesquisadores e profissionais, os achados referente a como são realizados os testes de regressão, por profissionais e pesquisadores, que atuam em projetos de \ac{APPS} para Android. Utilizaremos a metodologia analisada em \citeonline{CARTAXO:2016}.
+  Esta etapa engloba a construção de \textit{Evidences Briefings} para reportar os achados referentes ao uso, na prática, da técnica de testes de regressão. A metodologia definida por \citeonline{CARTAXO:2016} será adotada neste estudo.
   
 \end{itemize}
 
 \section{Resultados Esperados}\label{sec:resultadosesperados}
-%Ao final deste trabalho, espera-se contribuir com os seguintes resultados:
-Com o desenvolvimento do presente estudo, espera-se contribuir com o estado da arte na área de qualidade de software, em particular no que diz respeito ao uso de técnicas de seleção de teste de regressão para o desenvolvimento de projetos de \ac{APPS} para Android. A seguir, sintetizamos as principais contribuições esperadas: 
+
+Com o desenvolvimento do presente estudo, espera-se contribuir com o estado-da-arte na área de qualidade de software, em particular no que diz respeito ao uso de técnicas de seleção de teste de regressão para o desenvolvimento de projetos de \ac{APPS} para Android. A seguir, sintetizamos as principais contribuições esperadas: 
 
 \begin{itemize}
 
@@ -130,9 +127,9 @@ Com o desenvolvimento do presente estudo, espera-se contribuir com o estado da a
     
     \item Coletar e analisar dados, no sentido de prover evidências empíricas sobre quais as técnicas de seleção implementadas por ferramentas são mais adequadas para projetos de \ac{APPS} Android.
     
-    \item Identificar a aplicabilidade das técnicas de seleção de teste de regressão por profissionais/pesquisadores que trabalham no desenvolvimento de projetos de \ac{APPS} para Android.
+    \item Identificar a aplicabilidade das técnicas de seleção de teste de regressão por profissionais que trabalham no desenvolvimento de projetos de \ac{APPS} para Android.
     
-    \item Coletar evidências que demonstrem como os profissionais/pesquisadores lidam com teste de regressão na prática.
+    \item Coletar evidências que demonstrem como os profissionais lidam com teste de regressão na prática.
     
     \item Apresentar o potencial, em termos de \textit{features} implementadas, das ferramentas de teste de regressão disponíveis para projetos Android, e levantar oportunidades para implementações futuras.
 

@@ -1,14 +1,12 @@
-\xchapter{Referencial Teórico, Conceitos e Aplicabilidade}{}
+\xchapter{Referencial Teórico}{}
 
 \acresetall 
 O presente capítulo apresenta os conceitos fundamentais necessários para a compreensão do trabalho proposto: evolução de software; qualidade de software; teste de software; teste de regressão, e técnicas de seleção de teste de regressão.
 
 \section{Evolução de Software}\label{sec:evolucaodesoftware}
 
-%Em 1967, havia uma consciência do crescimento rápido do mercado de desenvolvimento de software, bem como do impacto e da importância da utilização dos mesmos. Além disso, com os diversos problemas enfrentados na fabricação de software, observou-se a necessidade de desenvolvimento de técnicas baseadas em fundamentos teóricos e disciplinas práticas estabelecidas nos ramos tradicionais da engenharia. Esses fatores levaram a realização da primeira conferência sobre Engenharia de Software em 1968. O objetivo desta conferência, organizada pelo Comitê de Ciência da \ac{OTAN}, foi “o estabelecimento e uso de princípios de engenharia para obter software confiável, eficiente e economicamente viável” \cite{DBLP:series/springer/Mens08}.%
 
-O desenvolvimento de um software não termina com a entrega do sistema, mas, refere-se a um processo contínuo durante toda a sua vida útil. Após a entrega e/ou implantação do sistema, %Depois que um sistema é implantado,% 
-para que ele se mantenha útil, faz-se necessário o processo de evolução do software. A \textbf{evolução} é a fase em que as mudanças significativas na arquitetura e nas funcionalidades do software podem ser feitas. %Quando em serviço, as mudanças feitas são relativamente de pequeno porte e essenciais.%
+O desenvolvimento de um software não termina com a entrega do sistema, mas, refere-se a um processo contínuo durante toda a sua vida útil. Após a entrega do sistema, para que ele se mantenha útil, faz-se necessário o processo de evolução do software. A \textbf{evolução} é a fase em que as mudanças significativas na arquitetura e nas funcionalidades do software podem ser feitas. 
 No processo de evolução, ao decorrer da utilização do software, surgem novas solicitações de mudança, gerando assim novas \textit{releases} do sistema.
 
 Uma das consequências da evolução de software é a constante necessidade de realizar sua manutenção. A Norma IEEE 1219 \cite{257623} define manutenção de software como a modificação de um produto de software após a entrega para corrigir falhas; melhorar o desempenho ou outros atributos; ou adaptar o produto a uma modificação. \citeonline{DBLP:series/springer/Mens08} classifica o processo de manutenção como: perfectiva, corretiva, adaptativa ou preventiva:
@@ -31,33 +29,11 @@ Uma das consequências da evolução de software é a constante necessidade de r
 
 O termo qualidade é apresentado com diferentes conceitos na literatura. A ISO 9000 define qualidade como o grau
 em que um conjunto de características inerentes preenchem os requisitos \cite{iso9000}. Para \citeonline{juran1970quality} e \citeonline {crosby1979quality}, o conceito de qualidade está relacionado à ``conformidade com requisitos'' e ``adequação para
-uso'', respectivamente. Para \citeonline{HIRAMA2011}, qualidade é algo difícil de ser definido. Ainda mais difícil é garantir a qualidade de algum produto, visto que a percepção de qualidade passa pelas expectativas que cada pessoa tem sobre algum produto ou serviço. %A resposta do que é qualidade baseia-se nas expectativas dos \textit{stakeholders}, vide Figura \ref{figure:conceitoqualidade}.%
-
-
-\begin{comment}
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=.5\textwidth]{images/conceitoqualidade.png}
-\caption{\textit{Stakeholders} e suas expectativas sobre qualidade de software  \cite{HIRAMA2011}}
-\label{figure:conceitoqualidade}
-\end{figure}
-\end{comment}
-
+uso'', respectivamente. Para \citeonline{HIRAMA2011}, qualidade é algo difícil de ser definido. Ainda mais difícil é garantir a qualidade de algum produto, visto que a percepção de qualidade passa pelas expectativas que cada pessoa tem sobre algum produto ou serviço. 
 
 Tendo em vista a importância da qualidade no processo de desenvolvimento de um software, garantir a qualidade é uma tarefa relevante. Segundo \citeonline{HIRAMA2011}, Garantia de Qualidade, é o processo geral de definição de como a qualidade de software pode ser atingida e como a organização de desenvolvimento sabe que o software tem o nível de qualidade necessário. A garantia de qualidade estabelece processos, procedimentos e padrões que conduzem a um software de qualidade. 
 
-De acordo com \citeonline{HIRAMA2011}, a qualidade de um software está intimamente relacionada à quantidade de defeitos descobertos. Quanto mais defeitos são descobertos, maior é a qualidade do software. %A Figura \ref{figure:ETESTE} ilustra a relação entre qualidade de software e extensão de teste.%
-
-\begin{comment}
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=.5\textwidth]{images/ETESTE.png}
-\caption{Relação entre qualidade de software e extensão de teste \cite{HIRAMA2011}.}
-\label{figure:ETESTE}
-\end{figure}
-\end{comment}
-
-A próxima seção apresenta os conceitos fundamentais sobre teste de software.
+De acordo com \citeonline{HIRAMA2011}, a qualidade de um software está intimamente relacionada à quantidade de defeitos descobertos. Quanto mais defeitos são descobertos, maior é a qualidade do software. 
 
 
 \section{Teste de Software}\label{sec:testesdesoftware}
@@ -65,10 +41,9 @@ Apresentamos alguns conceitos necessários para compreensão da importância da 
 
 \subsection{Validação, Verificação e Teste}
 
-%Desenvolver software não é uma tarefa simples e envolve diversas condicionais, tais como: escopo, prazo e recurso disponível. Nesse processo, um problema que pode ocorrer é entregar algo diferente do que era esperado pelo cliente. Isso acontece na maioria das vezes por causa de erros humanos, ou seja, porque as atividades de desenvolvimento dependem da capacidade de interpretação e execução das pessoas que as constroem. Para que esses erros não perdurem e para que se possa identificá-los antes de liberar o software para utilização, existe uma série de atividades, coletivamente chamadas de Validação, Verificação e Teste.%
 Em geral, dividem-se as atividades de Validação, Verificação e Teste em estáticas e dinâmicas. As estáticas são as que não requerem a execução ou mesmo a existência de um programa ou modelo executável para serem conduzidas. As dinâmicas são as que se baseiam na execução de um programa ou de um modelo \cite{DELAMARO2007}.
 
-\ac{VV} permite que se determine sistematicamente se os requisitos de um sistema estão sendo corretamente tratados e implementados. A atividade de testes tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos do software. \ac{VV} contribuem diretamente para o atendimento dos prazos e custos do projeto. Portanto, conhecer os conceitos de \ac{VV} é importante para obter produtos de maior qualidade e produtividade e melhorar os processos continuamente. As atividades de validar, verificar e testar auxiliam na \ac{QA} do software \cite{HIRAMA2011}.
+\ac{VV} permite que se determine sistematicamente se os requisitos de um sistema estão sendo corretamente tratados e implementados. Por sua vez, a atividade de testes tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos. \ac{VV} contribuem diretamente para o atendimento dos prazos e custos do projeto. Portanto, conhecer os conceitos de \ac{VV} é importante para obter produtos de maior qualidade e produtividade e melhorar os processos continuamente. As atividades de verificar, validar e testar auxiliam na Garantia da Qualidade do software \cite{HIRAMA2011}.
 
 
 É importante compreender a distinção entre alguns conceitos relacionados, conforme apresentado no padrão de testes de software da IEEE \cite{159342}:
@@ -94,14 +69,13 @@ as funções requeridas dentro de um nível de desempenho requerido.
 
     \begin{itemize}
         \item Manifestação de um defeito no sistema ou software (ex: a ``tela azul'' no Sistema Operacional Windows).
-        \item Apresentação de datas incorretas.
     \end{itemize}
     
 \end{enumerate}
 
 \subsection{Atividade de Teste de Software}
 
-A atividade de teste tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos do software. O teste de software pode ser usado para mostrar a presença de defeitos, mas nunca a sua ausência \cite{HIRAMA2011}.
+A atividade de teste tem por objetivo descobrir defeitos no software, considerando aspectos estruturais e lógicos. O teste de software pode ser usado para mostrar a presença de defeitos, mas nunca a sua ausência \cite{HIRAMA2011}.
 
 Testes devem acontecer desde o momento da concepção do software perpassando todo o processo de desenvolvimento. Um procedimento de teste completo é composto por algumas etapas, conforme apresentado na Figura \ref{figure:PTESTE}. O teste procura descobrir defeitos quando o comportamento do software não está correto ou não está em conformidade com o que foi especificado.
 
@@ -129,16 +103,7 @@ Segundo \citeonline{DELAMARO2007}, as duas técnicas mais amplamente aceitas na 
 \begin{itemize}
     \item \textbf{Técnica Funcional}: Técnica utilizada para projetar casos de teste na qual o programa ou sistema é considerado uma caixa preta. Para testá-lo, fornece-se entradas e avalia-se as saídas geradas para verificar se estão em conformidade com os objetivos especificados. No teste funcional os detalhes de implementação não são considerados e o software é avaliado segundo a visão do usuário \cite{DELAMARO2007}.
     
-    %\textcolor{red}{INCLUIR Particionamento em Classes de Equivalência.}%
-    
-    %\textcolor{red}{INCLUIR Análise do Valor Limite.}%
-    
-    
     \item \textbf{Técnica Estrutural}: A técnica estrutural estabelece os requisitos de teste com base em uma dada implementação, requerendo a execução de partes ou de componentes elementares do programa. Testa-se os caminhos lógicos do software, utilizando casos de teste para provar conjuntos específicos, estruturas condicionais, definições e uso de variáveis. Os testes gerados por essa técnica são chamados também de teste de caixa branca \cite{DELAMARO2007}.
-    
-    %\textcolor{red}{INCLUIR Critérios Baseados em Fluxo de Controle.}%
-    %\textcolor{red}{INCLUIR Critérios Baseados em Fluxo de Dados.}%
-    %\textcolor{red}{INCLUIR Critérios Baseados na Complexidade.}%
     
 \end{itemize}
 
@@ -164,9 +129,6 @@ Segundo \citeonline{HIRAMA2011}, os testes de Caixa Branca e os testes de Caixa 
 \end{itemize}
 
 
-%\textcolor{red}{INCLUIR Técnicas de Teste Ágil (TDD e BDD)}%
-
-
 \subsection{Tipos de Teste}
 
 
@@ -174,7 +136,7 @@ A atividade de testes é dividida em fases com objetivos distintos \cite{DELAMAR
 
 \begin{itemize}
 
-\item {\textbf{Teste de unidade}}: tem como foco as menores unidades de um programa, podendo ser funções, procedimentos, métodos ou classes. O objetivo é testar os componentes isoladamente verificando o funcionamento conjunto dos algoritmos e as estruturas de dados. Espera-se então que sejam identificados erros relacionados a algoritmos incorretos ou mal implementados, estruturas de dados incorretas, ou simples erros de programação.  A referência usada para os teste é a Especificação de Módulos, um documento detalhado de cada módulo de software. O teste de unidade pode ser aplicado à medida que ocorre a implementação das unidades e pelo próprio desenvolvedor. 
+\item {\textbf{Teste de unidade}}: tem como foco as menores unidades de um programa, podendo ser funções, procedimentos, métodos ou classes. O objetivo é testar os componentes isoladamente verificando o funcionamento conjunto dos algoritmos e as estruturas de dados. Espera-se então que sejam identificados erros relacionados a algoritmos incorretos ou mal implementados, estruturas de dados incorretas, ou simples erros de programação.  A referência usada para os testes é a Especificação de Módulos, um documento detalhado de cada módulo de software. O teste de unidade pode ser aplicado à medida que ocorre a implementação das unidades e pelo próprio desenvolvedor. 
 
 \item {\textbf{Teste de integração}}: deve ser realizado após serem testadas as unidades individuais, e a ênfase é dada na construção da estrutura do sistema. O objetivo é testar um conjunto de módulos verificando o seu funcionamento com foco nas suas interfaces entre os módulos. Quando as diversas partes do software são colocadas para trabalhar juntas, verifica-se se a interação entre elas funciona de maneira adequada e não ocasiona erros. Faz-se necessário um grande conhecimento das estruturas internas e das interações existentes entre as partes do sistema. A referência usada para os testes é a Especificação de Projeto, um documento detalhado da organização e interdependência entre os módulos de software. O teste de integração tende a ser executado pela própria equipe de desenvolvimento. 
 
@@ -236,9 +198,9 @@ Para \citeonline{Ammann:2008:IST:1355340}, os testes de regressão devem ser aut
 
 \subsection{Distinção entre as classes de técnicas}
  
-Para \citeonline{Ammann:2008:IST:1355340} uma técnica é \textbf{precisa} na medida em que omite testes de regressão que não são reveladores de modificação. Uma técnica é \textbf{eficiente} na medida em que determinar o subconjunto apropriado do conjunto de testes de regressão. E, uma técnica é \textbf{geral} no grau que se aplica a uma ampla variedade de situações práticas.
+Para \citeonline{Ammann:2008:IST:1355340}, uma técnica é \textbf{precisa} na medida em que omite testes de regressão que não são reveladores de modificação. Uma técnica é \textbf{eficiente} na medida em que determinar o subconjunto apropriado do conjunto de testes de regressão. Por sua vez, uma técnica é \textbf{geral} no grau que se aplica a uma ampla variedade de situações práticas.
 
-Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de teste de regressão são classificadas como: Técnicas de Seleção; Técnicas de Minimização; e Técnicas de Priorização, seguida das seguintes definições:
+Segundo \citeonline{Yoo:2012:RTM:2284811.2284813}, as técnicas de teste de regressão são classificadas como: Técnicas de Seleção; Técnicas de Minimização; e Técnicas de Priorização, seguida das seguintes definições:
  
  
 \begin{itemize}
@@ -247,7 +209,7 @@ Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de teste de regre
  
  As técnicas de minimização do conjunto de testes visam identificar casos de teste redundantes e removê-los do conjunto de testes para reduzir o tamanho do conjunto de testes.
   
-\textbf{Dado}: Um conjunto de testes $T$, um conjunto de requisitos de teste ${r1, ..., rn}$, que deve ser satisfeito para fornecer o teste ``adequado'' desejado do programa e subconjuntos de ${T, T1, ..., T_n}$, um associado a cada um dos $r_is$ de tal forma que qualquer um dos casos de teste $t_j$ pertencentes ao $T_$ pode ser usado para atingir o requisito $r_i$.
+\textbf{Dado}: Um conjunto de testes $T$, um conjunto de requisitos de teste ${r1, ..., rn}$, que deve ser satisfeito para fornecer o teste ``adequado'' desejado do programa e subconjuntos de ${T, T1, ..., T_n}$, um relacionado a cada um dos $r_is$ de tal forma que qualquer um dos casos de teste $t_j$ pertencentes ao $T_$ pode ser usado para atingir o requisito $r_i$.
 
 \textbf{Problema}: Encontre um conjunto representativo, $T'$, de casos de teste de $T$ que satisfaça todos os $r_is$.
 
@@ -255,7 +217,7 @@ Segundo \citeonline{Yoo:2012:RTM:2284811.2284813} as técnicas de teste de regre
 
 \item \textbf{Definição 2 (Problema de Seleção de Casos de Teste)}:
 
-A seleção do caso de teste, no inglês \ac{RTS}, é essencialmente semelhante ao problema de minimização do conjunto de testes: ambos os problemas tratam da escolha de um subconjunto de casos de teste do conjunto de testes. A principal diferença entre essas duas abordagens na literatura é se o foco está nas mudanças no \ac{SUT}, em português, sistema sob teste. A minimização do conjunto de testes geralmente é baseada em métricas como a cobertura medida de uma única versão do programa em teste. Em contraste, no \ac{RTS}, os casos de teste são selecionados porque sua execução é relevante para as mudanças entre a versão anterior e a atual do \ac{SUT}.
+A seleção do caso de teste, do original em inglês \ac{RTS}, é essencialmente semelhante ao problema de minimização do conjunto de testes: ambos os problemas tratam da escolha de um subconjunto de casos de teste do conjunto de testes. A principal diferença entre essas duas abordagens na literatura é se o foco está nas mudanças no sistema sob teste, do original em inglês \ac{SUT}. A minimização do conjunto de testes geralmente é baseada em métricas como a cobertura medida de uma única versão do programa em teste. Em contraste, no \ac{RTS}, os casos de teste são selecionados porque sua execução é relevante para as mudanças entre a versão anterior e a atual do \ac{SUT}.
 
 \textbf{Dado}: O programa $P$, a versão modificada de $P$, $P'$ e um conjunto de testes $T$.
 \textbf{Problema}: Encontre um subconjunto de  $T$ , $T'$, com o qual testar $P'$.
@@ -274,10 +236,10 @@ A priorização de caso de teste procura encontrar o pedido ideal de casos de te
 \end{itemize}
 
 
-\subsection{Classificação dos Casos de Testes}
+\subsection{Classificação dos casos de teste}
 
 
-Segundo \cite{Yoo:2012:RTM:2284811.2284813} categorizam os casos de teste em cinco classes. As três primeiras classes consistem em casos de teste que já existem em $T$.
+\citeonline{Yoo:2012:RTM:2284811.2284813} categorizam os casos de teste em cinco classes. As três primeiras classes consistem em casos de teste que já existem em $T$.
 
 \begin{itemize}
   \item \textbf{Reutilizável}: Os casos de teste reutilizáveis executam apenas as partes do programa que permanecem inalteradas entre duas versões, ou seja, as partes do programa que são comuns a $P$ e $P'$. Não é necessário executar esses casos de teste para testar $P'$; no entanto, eles são chamados de reutilizáveis porque ainda podem ser retidos e reutilizados para o teste de regressão das futuras versões do $P$.
@@ -295,25 +257,25 @@ As duas classes restantes consistem em casos de teste que ainda precisam ser ger
 \section{Técnicas de seleção de teste de regressão}\label{sec:rts}
 
 
-Em virtude da necessidade de técnicas \textbf{eficientes}, que determinam o subconjunto apropriado de casos de testes a serem reexecutados, e de técnicas \textbf{precisas} que omitem casos de testes que não são reveladores de modificação \cite{Ammann:2008:IST:1355340}, ao longo de décadas diversos estudos foram realizados para prover essas técnicas \cite{WHITE1991}, \cite{Graves:2001:ESR:367008.367020}, \cite{630875}, \cite{536955}, \cite{ENGSTROM201014},\cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
+Em virtude da necessidade de técnicas \textbf{eficientes}, que determinam o subconjunto apropriado de casos de teste a serem reexecutados, e de técnicas \textbf{precisas} que omitem casos de teste que não são reveladores de modificação \cite{Ammann:2008:IST:1355340}, ao longo de décadas diversos estudos foram realizados para prover essas técnicas \cite{WHITE1991}, \cite{Graves:2001:ESR:367008.367020}, \cite{630875}, \cite{536955}, \cite{ENGSTROM201014},\cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.
 
 As técnicas podem ser categorizadas, para que sejam avaliadas e comparadas, em quatro categorias: inclusividade, precisão, eficiência e generalidade. A \textbf{inclusividade} mede o quanto uma técnica escolhe testes que farão com que o programa modificado produza uma saída diferente do programa original expondo falhas causadas por modificações. A \textbf{precisão} mede a capacidade de uma técnica evitar a escolha de testes que não farão com que o programa modificado produza resultados diferentes do programa original. A \textbf{eficiência} mede o custo computacional e, portanto, a praticidade de uma técnica. A \textbf{generalidade} mede a capacidade de uma técnica lidar com construções de linguagem realistas e diversificadas, modificações de código arbitrariamente complexas e aplicativos de teste realistas \cite{536955}.
 
-As técnicas de seleção reduzem o custo do teste de um programa modificado, pois, reutilizam testes existentes e identificam partes do programa modificado ou sua especificação que deve ser testada. Estas técnicas diferem da técnica de reexecução de todos os casos de teste da versão original. Segundo \cite{WHITE1991}, uma técnica de seleção é mais econômica que a técnica de reexecução de todos os casos de teste, se o custo de selecionar um subconjunto reduzido de testes a executar for menor que o custo de executar os testes que a técnica de seleção omitir.
+As técnicas de seleção reduzem o custo do teste de um programa modificado, pois, reutilizam testes existentes e identificam partes do programa modificado ou sua especificação que deve ser testada. Estas técnicas diferem da técnica de reexecução de todos os casos de teste da versão original. \citeonline{WHITE1991} uma técnica de seleção é mais econômica que a técnica de reexecução de todos os casos de teste, se o custo de selecionar um subconjunto reduzido de testes a executar for menor que o custo de executar os testes que a técnica de seleção omitir.
 
 Os procedimentos fundamentais executados por uma técnica de seleção de teste de regressão são: \cite{536955}
 
 \begin{enumerate}
-    \item Selecionar $T'$ $\subseteq$ $T$, um conjunto de casos de testes para executar em $P'$.
+    \item Selecionar $T'$ $\subseteq$ $T$, um conjunto de casos de teste para executar em $P'$.
     \item Testar $P'$ com $T'$, para estabelecer a correção de $P'$ em relação a $T'$.
     \item Se necessário, criar $T''$, um novo conjunto de casos de teste funcional ou estrutural para testar $P'$.
     \item Testar $P'$ com $T''$, para estabelecer a correção de $P'$ em relação a $T''$.
-    \item Crie $T'''$, um novo conjunto de casos de testes e histórico de testes para $P'$, de $T$, $T'$, e $T''$.
+    \item Crie $T'''$, um novo conjunto de casos de teste e histórico de testes para $P'$, de $T$, $T'$, e $T''$.
 \end{enumerate}
 
 Executando essas etapas, uma técnica de seleção de teste de regressão aborda quatro problemas. A etapa 1 refere-se ao problema de selecionar um subconjunto de testes $T'$ de $T$ com o qual possa testar $P'$. A etapa 3 refere-se ao problema de cobertura, ou seja, identificar a necessidade de criação de testes adicionais. As etapas 2 e 4 tratam o problema de executar testes com eficiência, verificando se os resultados estão corretos. A etapa 5 refere-se ao problema de manutenção do conjunto de testes, atualizando e armazenando as informações de teste.
 
-As técnicas de seleção de teste de regressão tem como foco o problema 1, ou seja, selecionar um subconjunto de teste de $T$, $T'$ com o qual testar $P'$, garantindo assim que as mudanças realizadas não modificaram o funcionamento do software. Essas técnicas localizam testes em $T$ que expõem falhas em $P'$.
+As técnicas de seleção de teste de regressão tem como foco o problema 1, ou seja, selecionar um subconjunto de teste de $T$ representado por $T'$ com o qual testar $P'$, garantindo assim que as mudanças realizadas não modificaram o funcionamento do software. Essas técnicas localizam testes em $T$ que expõem falhas em $P'$.
 
 Algumas premissas fundamentais em relação a técnicas de seleção de teste de regressão: \cite{536955}
 \begin{itemize}
@@ -324,15 +286,14 @@ Algumas premissas fundamentais em relação a técnicas de seleção de teste de
     \item O teste $t$ é considerado obsoleto para o programa $P'$ se e somente se $t$ especificar uma entrada para $P'$ que, de acordo com $S'$, é inválida para $P'$ ou $t$ especificar uma relação de entrada-saída inválida para $P'$.
 \end{itemize}
 
-%A literatura apresenta diversos estudos sobre técnicas de seleção de teste de regressão, tais como, revisões sistemáticas, \textit{survey}, estudos empíricos: \cite{WHITE1991}, \cite{536955}, \cite{630875}, \cite{Rosenblum97acomparative}, \cite{Rothermel2000},  \cite{Graves:2001:ESR:367008.367020},    \cite{ENGSTROM201014}, \cite{KAZMI2017}, \cite{ROMANO201862}.%
 
-\section{Testes de \ac{APPS} para Android}\label{testesAndroid}
+\section{Testes de apps para Android}\label{testesAndroid}
 
-Segundo \citeonline{glauber2019dominando} o Android não é apenas um sistema operacional, mas um conjunto completo de software para dispositivo móveis que inclui: um sistema operacional, um \textit{middleware} e aplicações-chave. O Android é open-source e seu código fonte está disponível para download \footnote{\url{https://source.android.com/}}. Assim como o código-fonte, a documentação para desenvolvimento e teste também está disponível para consulta\footnote{\url{https://developer.android.com/}} . 
+Segundo \citeonline{glauber2019dominando}, o Android não é apenas um sistema operacional, mas um conjunto completo de software para dispositivos móveis que inclui: um sistema operacional, um \textit{middleware} e aplicações-chave. O Android é open-source e seu código fonte está disponível para download \footnote{\url{https://source.android.com/}}. Assim como o código-fonte, a documentação para desenvolvimento e teste também está disponível para consulta\footnote{\url{https://developer.android.com/}} . 
 
 Desenvolver e testar apps para Android apresentam alguns desafios específicos, tais como: concorrência, segurança, performance, eficiência energética, compatibilidade, detecção de defeitos \cite{8453877}. Assim, testar um app para Android é uma tarefa que tende a exigir um esforço da equipe. 
 
-Com o objetivo de reduzir o esforço de teste no processo de desenvolvimento de \ac{APPS} para Android, tanto a literatura, quanto o mercado, propõem ferramentas para automatizar o processo de testes em \ac{APPS} Android. As ferramentas podem ser gratuitas ou proprietárias, e estão focadas em diferentes tipos de testes no processo de desenvolvimento dos \ac{APPS} conforme \ref{table:androidtools}.
+Com o objetivo de reduzir o esforço de teste no processo de desenvolvimento de \ac{APPS} para Android, tanto a literatura, quanto o mercado, propõem ferramentas para automatizar o processo de testes em \ac{APPS} Android. As ferramentas podem ser gratuitas ou proprietárias, e estão focadas em diferentes tipos de testes no processo de desenvolvimento dos \ac{APPS}. O Apêndice \ref{table:androidtools} apresenta vinte e cinco ferramentas utilizadas para testes de apps para Android.
 
 \section{Síntese do Capítulo}\label{sec:sintesecapitulo}
 
